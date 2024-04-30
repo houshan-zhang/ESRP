@@ -1,0 +1,2825 @@
+
+
+Input parameters information:
+Solving setting:				3 (Benders framework plus initial cuts)
+Number of Customers:				1000
+Number of Suppliers:				100
+Budget (Cardinality restriction):		0
+Disaster Type:			1
+Quality of Service:				10
+Time limitation:				300
+Number of samplings:				100
+Random seed of graph generating:		1
+
+
+Generate graph start......
+Generate graph end. (time: 0.002478 s)
+
+
+Solve the network recovery problem under Benders decomposition framework......
+
+Build CPX formulation start......
+Build CPX formulation end. (time: 0.952307 s)
+
+CPX Solving Time Limit: 299.048
+Version identifier: 20.1.0.0 | 2020-11-10 | 9bedb6d68
+CPXPARAM_Preprocessing_Reduce                    1
+CPXPARAM_Preprocessing_Linear                    0
+CPXPARAM_Threads                                 1
+CPXPARAM_MIP_Strategy_CallbackReducedLP          0
+CPXPARAM_TimeLimit                               299.04769299999998
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+Legacy callback                                  LU
+Warning: Control callbacks may disable some MIP features.
+Tried aggregator 1 time.
+MIP Presolve eliminated 201 rows and 49 columns.
+MIP Presolve modified 3562 coefficients.
+Reduced MIP has 0 rows, 100 columns, and 0 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.51 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: traditional branch-and-cut.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.00 sec. (0.00 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap         Variable B NodeID Parent  Depth
+
+*     0     0      integral     0   753248.0000   753248.0000        0    0.00%                        0             0
+Elapsed time = 0.08 sec. (0.64 ticks, tree = 0.00 MB, solutions = 1)
+
+Root node processing (before b&c):
+  Real time             =    0.08 sec. (0.64 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =    0.08 sec. (0.64 ticks)
+
+
+Results statistics:
+	(a) Optimal objective value:				753248
+	(b) Relaxed objective value:				753248
+	(c) Number of branch-and-bound nodes:			0
+	(d) CPX solving time:					0.077505
+	(e) Total time:						1.02981
+	(f) Number of Benders cuts for binary solution:		0
+	(g) Number of Benders cuts for fractional solution:	0
+
+Finish.
+
+
+Input parameters information:
+Solving setting:				3 (Benders framework plus initial cuts)
+Number of Customers:				1000
+Number of Suppliers:				100
+Budget (Cardinality restriction):		5
+Disaster Type:			1
+Quality of Service:				10
+Time limitation:				300
+Number of samplings:				100
+Random seed of graph generating:		1
+
+
+Generate graph start......
+Generate graph end. (time: 0.002384 s)
+
+
+Solve the network recovery problem under Benders decomposition framework......
+
+Build CPX formulation start......
+Build CPX formulation end. (time: 0.955555 s)
+
+CPX Solving Time Limit: 299.044
+Version identifier: 20.1.0.0 | 2020-11-10 | 9bedb6d68
+CPXPARAM_Preprocessing_Reduce                    1
+CPXPARAM_Preprocessing_Linear                    0
+CPXPARAM_Threads                                 1
+CPXPARAM_MIP_Strategy_CallbackReducedLP          0
+CPXPARAM_TimeLimit                               299.044445
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+Legacy callback                                  LU
+Warning: Control callbacks may disable some MIP features.
+Tried aggregator 1 time.
+MIP Presolve eliminated 100 rows and 0 columns.
+MIP Presolve modified 3562 coefficients.
+Reduced MIP has 101 rows, 149 columns, and 3633 nonzeros.
+Reduced MIP has 49 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (2.62 ticks)
+Probing time = 0.00 sec. (0.17 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: traditional branch-and-cut.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.00 sec. (1.76 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap         Variable B NodeID Parent  Depth
+
+      0     0   593144.4469     3                 585176.8100      109         
+*     0+    0                       667923.9800   593144.4469            11.20%
+*     0+    0                       628488.9500   593144.4469             5.62%
+      0     0   596195.3636     8   628488.9500      User: 75      141    5.14%
+*     0+    0                       614642.9700   596195.3636             3.00%
+      0     0   596398.4270     9   614642.9700      User: 48      168    2.97%
+      0     0   596530.4293     8   614642.9700      User: 30      184    2.95%
+      0     0   596608.3379     9   614642.9700      User: 17      200    2.93%
+      0     0   596614.0508     9   614642.9700       User: 1      204    2.93%
+      0     0   596614.0749     9   614642.9700       User: 1      205    2.93%
+*     0+    0                       602620.7800   596614.0749             1.00%
+      0     2   596614.0749     9   602620.7800   596648.1048      205    0.99%                        0             0
+Elapsed time = 1.56 sec. (60.85 ticks, tree = 0.01 MB, solutions = 4)
+*    18    11      integral     0   601218.4500   598616.1306      639    0.43%
+
+User cuts applied:  798
+
+Root node processing (before b&c):
+  Real time             =    1.56 sec. (60.92 ticks)
+Sequential b&c:
+  Real time             =    2.00 sec. (65.31 ticks)
+                          ------------
+Total (root+branch&cut) =    3.56 sec. (126.23 ticks)
+
+
+Results statistics:
+	(a) Optimal objective value:				601218
+	(b) Relaxed objective value:				601218
+	(c) Number of branch-and-bound nodes:			55
+	(d) CPX solving time:					3.56049
+	(e) Total time:						4.51604
+	(f) Number of Benders cuts for binary solution:		494
+	(g) Number of Benders cuts for fractional solution:	304
+
+Finish.
+
+
+Input parameters information:
+Solving setting:				3 (Benders framework plus initial cuts)
+Number of Customers:				1000
+Number of Suppliers:				100
+Budget (Cardinality restriction):		10
+Disaster Type:			1
+Quality of Service:				10
+Time limitation:				300
+Number of samplings:				100
+Random seed of graph generating:		1
+
+
+Generate graph start......
+Generate graph end. (time: 0.002382 s)
+
+
+Solve the network recovery problem under Benders decomposition framework......
+
+Build CPX formulation start......
+Build CPX formulation end. (time: 0.954741 s)
+
+CPX Solving Time Limit: 299.045
+Version identifier: 20.1.0.0 | 2020-11-10 | 9bedb6d68
+CPXPARAM_Preprocessing_Reduce                    1
+CPXPARAM_Preprocessing_Linear                    0
+CPXPARAM_Threads                                 1
+CPXPARAM_MIP_Strategy_CallbackReducedLP          0
+CPXPARAM_TimeLimit                               299.04525899999999
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+Legacy callback                                  LU
+Warning: Control callbacks may disable some MIP features.
+Tried aggregator 1 time.
+MIP Presolve eliminated 91 rows and 0 columns.
+MIP Presolve modified 3900 coefficients.
+Reduced MIP has 110 rows, 149 columns, and 3980 nonzeros.
+Reduced MIP has 49 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (2.72 ticks)
+Probing time = 0.00 sec. (0.19 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: traditional branch-and-cut.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.00 sec. (2.05 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap         Variable B NodeID Parent  Depth
+
+      0     0   464369.9179     4                 449040.4600      113         
+*     0+    0                       518863.0700   464369.9179            10.50%
+      0     0   470968.7937    10   518863.0700     Cuts: 101      154    9.23%
+      0     0   471830.4677    12   518863.0700      User: 71      187    9.06%
+      0     0   472237.5984    12   518863.0700      User: 42      219    8.99%
+*     0+    0                       500702.3600   472237.5984             5.68%
+      0     0   472473.4949    13   500702.3600      User: 45      241    5.64%
+      0     0   472552.8403    13   500702.3600      User: 15      259    5.62%
+*     0+    0                       496542.9000   472552.8403             4.83%
+      0     0   472574.1822    13   496542.9000       User: 7      272    4.83%
+*     0+    0                       487395.6100   472574.1822             3.04%
+      0     2   472574.1822    13   487395.6100   472807.0746      272    2.99%                        0             0
+Elapsed time = 1.92 sec. (130.45 ticks, tree = 0.01 MB, solutions = 4)
+*    10+   10                       485655.8400   474843.7311             2.23%
+*    60+   41                       485127.1100   475896.1139             1.90%
+     80    54        cutoff         485127.1100   476371.9121     2887    1.80%     supplier-23 U     80     79     11
+    148    86   479921.7469     9   485127.1100   477564.8126     4809    1.56%     supplier-82 N    148     26      6
+    209   109   482544.0360     6   485127.1100   478474.0812     6757    1.37%     supplier-77 U    209    208      9
+    277   136   483238.6353     7   485127.1100   479368.6113     8492    1.19%     supplier-77 N    277    276      9
+*   310+   95                       482391.1300   479441.5049             0.61%
+    349    93        cutoff         482391.1300   479862.4950    10210    0.52%     supplier-81 D    349     53      7
+    434    59   482259.6148     4   482391.1300   481034.3525    11971    0.28%     supplier-81 N    434    363     10
+
+Mixed integer rounding cuts applied:  1
+User cuts applied:  2727
+
+Root node processing (before b&c):
+  Real time             =    1.92 sec. (130.70 ticks)
+Sequential b&c:
+  Real time             =    6.47 sec. (1595.41 ticks)
+                          ------------
+Total (root+branch&cut) =    8.40 sec. (1726.11 ticks)
+
+
+Results statistics:
+	(a) Optimal objective value:				482391
+	(b) Relaxed objective value:				482391
+	(c) Number of branch-and-bound nodes:			507
+	(d) CPX solving time:					8.39589
+	(e) Total time:						9.35063
+	(f) Number of Benders cuts for binary solution:		2212
+	(g) Number of Benders cuts for fractional solution:	515
+
+Finish.
+
+
+Input parameters information:
+Solving setting:				3 (Benders framework plus initial cuts)
+Number of Customers:				1000
+Number of Suppliers:				100
+Budget (Cardinality restriction):		20
+Disaster Type:			1
+Quality of Service:				10
+Time limitation:				300
+Number of samplings:				100
+Random seed of graph generating:		1
+
+
+Generate graph start......
+Generate graph end. (time: 0.002434 s)
+
+
+Solve the network recovery problem under Benders decomposition framework......
+
+Build CPX formulation start......
+Build CPX formulation end. (time: 0.984062 s)
+
+CPX Solving Time Limit: 299.016
+Version identifier: 20.1.0.0 | 2020-11-10 | 9bedb6d68
+CPXPARAM_Preprocessing_Reduce                    1
+CPXPARAM_Preprocessing_Linear                    0
+CPXPARAM_Threads                                 1
+CPXPARAM_MIP_Strategy_CallbackReducedLP          0
+CPXPARAM_TimeLimit                               299.01593800000001
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+Legacy callback                                  LU
+Warning: Control callbacks may disable some MIP features.
+Tried aggregator 1 time.
+MIP Presolve modified 7043 coefficients.
+Reduced MIP has 201 rows, 149 columns, and 7295 nonzeros.
+Reduced MIP has 49 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (3.25 ticks)
+Probing time = 0.00 sec. (0.34 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: traditional branch-and-cut.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.00 sec. (3.01 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap         Variable B NodeID Parent  Depth
+
+      0     0   268520.1769     4                 219941.1500      115         
+*     0+    0                       389555.1600   268520.1769            31.07%
+      0     0   287432.2079    16   389555.1600     Cuts: 109      213   26.22%
+*     0+    0                       368069.8500   287432.2079            21.91%
+      0     0   295252.6829    19   368069.8500      Cuts: 97      327   19.78%
+*     0+    0                       357521.7900   295252.6829            17.42%
+      0     0   299843.2100    24   357521.7900      User: 87      430   16.13%
+*     0+    0                       356451.4700   299843.2100            15.88%
+      0     0   300876.4123    28   356451.4700      User: 80      504   15.59%
+*     0+    0                       347844.1500   300876.4123            13.50%
+      0     0   302505.3915    28   347844.1500      User: 71      608   13.03%
+*     0+    0                       335828.6600   302505.3915             9.92%
+      0     0   303099.5907    28   335828.6600      User: 57      675    9.75%
+      0     0   303408.2750    29   335828.6600      User: 39      746    9.65%
+      0     0   303461.5263    28   335828.6600      User: 30      784    9.64%
+      0     0   303481.9688    28   335828.6600      User: 10      803    9.63%
+      0     0   303485.5514    28   335828.6600       User: 1      810    9.63%
+      0     0   303485.7890    28   335828.6600       User: 1      812    9.63%
+      0     2   303485.7890    28   335828.6600   303489.7875      812    9.63%                        0             0
+Elapsed time = 4.47 sec. (567.86 ticks, tree = 0.01 MB, solutions = 6)
+     10    12   314959.3118    21   335828.6600   305513.2905     2634    9.03%     supplier-91 U     10      9      7
+     17    19   328404.7118    23   335828.6600   305513.2905     4368    9.03%     supplier-81 N     17     15     12
+     39    35   307685.9246    25   335828.6600   306067.0771     5807    8.86%     supplier-21 U     39     38      4
+     51    47   313746.8723    17   335828.6600   306067.0771     7080    8.86%     supplier-94 D     51     50     12
+     76    72   333569.7226     4   335828.6600   306067.0771     8179    8.86%     supplier-96 U     76     74     30
+     80    72   307798.9731    26   335828.6600   307725.8849     8353    8.37%     supplier-23 D     80     37      3
+    100    92   334948.4700     0   335828.6600   307725.8849     9573    8.37%     supplier-99 D    100     99     23
+    130   118   328764.5000     0   335828.6600   307798.9731    10930    8.35%     supplier-76 U    130    129     32
+    153   135        cutoff         335828.6600   307824.3214    12308    8.34%      supplier-7 N    153    152     24
+    218   190   313694.9271    18   335828.6600   308891.9324    16366    8.02%     supplier-88 U    218    217     11
+Elapsed time = 18.35 sec. (3938.50 ticks, tree = 0.52 MB, solutions = 6)
+    271   235   318256.6923    14   335828.6600   309574.9483    19684    7.82%     supplier-77 D    271    270     14
+    342   294   310901.3111    22   335828.6600   309825.1014    23506    7.74%     supplier-61 D    342     43      7
+    404   345   315348.9582    17   335828.6600   309908.5537    26828    7.72%     supplier-81 U    404    403     11
+    454   385   311365.3312    20   335828.6600   310243.3337    29987    7.62%     supplier-39 D    454    105      8
+    518   441   324151.9384    10   335828.6600   310272.3078    33791    7.61%     supplier-62 D    518    517     24
+*   520+  441                       335353.1800   310272.3078             7.48%
+    548   463   311810.6870    20   335353.1800   310501.2012    35676    7.41%     supplier-15 D    548     45      8
+    590   499   325860.4436     8   335353.1800   310643.2177    38772    7.37%     supplier-62 U    590    589     24
+    630   531   320462.6053    15   335353.1800   310646.7965    41487    7.37%     supplier-61 D    630    629     16
+    677   570   320135.8714    17   335353.1800   310783.6585    44789    7.33%     supplier-36 D    677    674     10
+    706   595   321074.3890    15   335353.1800   310875.1580    46772    7.30%     supplier-36 U    706    705     15
+Elapsed time = 29.08 sec. (13598.27 ticks, tree = 1.03 MB, solutions = 7)
+    756   637   325797.1818     8   335353.1800   310914.8753    49962    7.29%      supplier-6 D    756    755     22
+    795   668   322464.4544    11   335353.1800   311153.2485    52895    7.22%     supplier-61 U    795    793     16
+    850   715   317695.6627    20   335353.1800   311180.2241    55967    7.21%     supplier-61 D    850    849     12
+    890   745   315638.5849    16   335353.1800   311210.3392    58615    7.20%     supplier-88 U    890    889     12
+    931   774   321017.1484    13   335353.1800   311269.2941    61791    7.18%      supplier-7 U    931    930     17
+    978   811   318358.7356    19   335353.1800   311284.6495    64504    7.18%     supplier-91 U    978    977     12
+   1029   854   318271.4160    15   335353.1800   311416.9138    67526    7.14%     supplier-94 D   1029   1027     14
+   1080   895   323274.4874    17   335353.1800   311440.5102    70281    7.13%     supplier-81 U   1080   1079     10
+   1136   943   319820.6971    15   335353.1800   311464.1136    73043    7.12%     supplier-77 D   1136   1135     13
+   1190   989   314648.0420    19   335353.1800   311543.8718    75632    7.10%     supplier-88 D   1190    107     10
+Elapsed time = 37.06 sec. (23421.51 ticks, tree = 1.61 MB, solutions = 7)
+   1232  1023   316994.7845    18   335353.1800   311548.0869    78407    7.10%     supplier-91 U   1232   1231     13
+   1280  1063   312988.2753    22   335353.1800   311587.9867    80851    7.09%     supplier-77 U   1280    399      7
+   1317  1096   313701.9934    22   335353.1800   311610.0666    83380    7.08%     supplier-23 D   1317    602      6
+   1346  1121   318174.2833    22   335353.1800   311633.8716    85127    7.07%     supplier-63 U   1346    601      5
+   1376  1147   321511.8398    12   335353.1800   311650.1972    87577    7.07%     supplier-15 U   1376   1375     17
+   1414  1177   323689.3316    12   335353.1800   311760.9049    89986    7.04%      supplier-7 D   1414   1412     16
+   1450  1209   334625.3344     9   335353.1800   311839.3075    92076    7.01%     supplier-76 N   1450   1449     22
+   1487  1238   323839.0539    15   335353.1800   311940.9097    94693    6.98%     supplier-28 D   1487   1486     16
+   1528  1276   335086.5389     2   335353.1800   311959.6730    97016    6.98%     supplier-67 U   1528   1527     32
+   1580  1320   334744.7000     0   335353.1800   312005.9702    99647    6.96%     supplier-68 D   1580   1579     21
+Elapsed time = 43.85 sec. (33170.44 ticks, tree = 2.19 MB, solutions = 7)
+   1611  1343   330061.0244    11   335353.1800   312016.8572   101856    6.96%      supplier-7 N   1611   1610     17
+   1646  1368   319345.5311    14   335353.1800   312058.6082   103990    6.95%     supplier-94 D   1646   1645     14
+   1680  1398   329640.1534     8   335353.1800   312093.4236   106105    6.94%     supplier-51 D   1680   1679     23
+   1727  1437   332202.4913     4   335353.1800   312122.3479   108578    6.93%     supplier-58 U   1727   1726     27
+   1760  1462   324818.0211    14   335353.1800   312148.1027   110475    6.92%     supplier-64 D   1760   1758     14
+   1789  1487   331618.9298    15   335353.1800   312165.9108   112765    6.91%      supplier-4 U   1789   1788     17
+   1824  1512   320521.4338    14   335353.1800   312250.0362   114983    6.89%     supplier-36 U   1824   1823     15
+   1860  1544   331996.2524     4   335353.1800   312258.9660   117159    6.89%     supplier-34 N   1860   1859     28
+   1903  1579   317436.5161    19   335353.1800   312270.6131   119552    6.88%     supplier-61 D   1903   1902      9
+   1938  1610   325280.5336    11   335353.1800   312277.9664   121827    6.88%     supplier-82 U   1938   1937     20
+Elapsed time = 50.68 sec. (43067.44 ticks, tree = 2.75 MB, solutions = 7)
+   1988  1652   318197.4779    13   335353.1800   312320.4404   124127    6.87%     supplier-17 U   1988   1987     12
+   2014  1674   324252.4762    16   335353.1800   312325.6401   126027    6.87%     supplier-53 D   2014   2012     14
+   2045  1701   320819.5927    16   335353.1800   312385.2295   127683    6.85%      supplier-4 U   2045   2044     15
+   2093  1741   319352.9364    19   335353.1800   312416.9271   130091    6.84%     supplier-63 U   2093   1248      9
+   2127  1772   325251.0012    12   335353.1800   312478.6309   132307    6.82%      supplier-7 D   2127   2126     24
+   2160  1801   329615.8320     7   335353.1800   312484.7215   134386    6.82%     supplier-34 D   2160   2158     23
+   2196  1829   320856.8646    16   335353.1800   312510.3821   136564    6.81%     supplier-61 D   2196   2195     13
+   2230  1859   330355.9757     6   335353.1800   312527.0702   138669    6.81%     supplier-99 D   2230   2229     27
+   2270  1891   320797.5096    13   335353.1800   312551.7747   140757    6.80%     supplier-36 D   2270   2267     13
+   2317  1934   325806.7321    12   335353.1800   312697.5594   142710    6.76%     supplier-68 D   2317   2316     23
+Elapsed time = 57.13 sec. (52900.52 ticks, tree = 3.52 MB, solutions = 7)
+   2359  1968   320047.7680    16   335353.1800   312757.4792   144738    6.74%     supplier-77 D   2359   2358     14
+   2390  1995   328516.6246    14   335353.1800   312775.4035   146652    6.73%     supplier-15 D   2390   2389     21
+   2412  2013   324778.7781    15   335353.1800   312817.0566   148290    6.72%     supplier-64 D   2412   2410     15
+   2442  2037   329743.5361     8   335353.1800   312821.5394   150359    6.72%     supplier-39 N   2442   2441     23
+   2474  2061   317397.7773    18   335353.1800   312891.8766   152385    6.70%     supplier-94 D   2474   2473     13
+   2506  2087   328189.7660    11   335353.1800   312897.3359   154588    6.70%     supplier-53 D   2506   2505     20
+   2543  2116   317472.4315    20   335353.1800   312940.6807   156525    6.68%     supplier-36 U   2543   2542      9
+   2568  2137   323124.8034    18   335353.1800   312952.5697   158588    6.68%     supplier-81 U   2568   2567     11
+   2591  2156   327369.1287    12   335353.1800   312968.7009   160505    6.67%     supplier-53 D   2591   2590     19
+   2634  2191   318188.8302    19   335353.1800   312993.7678   162501    6.67%     supplier-36 U   2634   2633     10
+Elapsed time = 63.44 sec. (62615.07 ticks, tree = 4.17 MB, solutions = 7)
+   2665  2218   322615.7199    17   335353.1800   313016.1618   164524    6.66%     supplier-64 U   2665   2664     16
+   2689  2238   328340.5913    11   335353.1800   313038.4047   166349    6.65%     supplier-15 D   2689   2688     19
+   2728  2269   316964.6204    22   335353.1800   313097.8554   168228    6.64%     supplier-88 U   2728   2727      9
+   2760  2297   326005.6712    18   335353.1800   313109.6090   170245    6.63%      supplier-7 D   2760   2758     15
+   2794  2327   325981.8401    15   335353.1800   313110.4852   172303    6.63%     supplier-82 D   2794   2793     17
+   2822  2347   321423.5725    18   335353.1800   313183.4748   174150    6.61%     supplier-94 U   2822     50     12
+   2844  2365   334364.6549     6   335353.1800   313249.2822   176017    6.59%     supplier-39 N   2844   2843     24
+   2865  2382   325829.5461    16   335353.1800   313260.9534   177810    6.59%     supplier-82 D   2865   2863     15
+   2897  2411   331588.3002     7   335353.1800   313261.4651   179647    6.59%     supplier-58 N   2897   2896     23
+   2926  2432   319752.2670    18   335353.1800   313266.4423   181489    6.59%     supplier-81 U   2926   2925     14
+Elapsed time = 69.55 sec. (72537.20 ticks, tree = 4.74 MB, solutions = 7)
+   2959  2461   328304.1980    12   335353.1800   313317.3351   183522    6.57%     supplier-58 U   2959   2958     21
+   2990  2488   331222.4000     0   335353.1800   313346.7054   185425    6.56%     supplier-65 D   2990   2988     21
+   3022  2512   319057.0741    17   335353.1800   313360.6965   187445    6.56%     supplier-91 U   3022   3021     12
+   3052  2538   323581.2340    14   335353.1800   313373.3877   189179    6.55%      supplier-4 U   3052   3051     14
+   3092  2570        cutoff         335353.1800   313374.8079   190801    6.55%     supplier-68 D   3092   3090     28
+   3126  2600   318515.8986    18   335353.1800   313482.9601   192911    6.52%     supplier-94 D   3126   3125     13
+   3158  2626   323908.8300    13   335353.1800   313564.4450   194900    6.50%     supplier-65 D   3158   3157     16
+   3203  2663   316423.3613    21   335353.1800   313589.8635   196797    6.49%     supplier-88 D   3203    973      8
+   3232  2688   321352.4764    14   335353.1800   313590.9488   198677    6.49%     supplier-61 D   3232   3230     13
+   3266  2718   328578.5781    16   335353.1800   313597.0110   200583    6.49%     supplier-77 D   3266   3265     13
+Elapsed time = 75.64 sec. (82527.60 ticks, tree = 5.46 MB, solutions = 7)
+   3301  2746   330119.3886     6   335353.1800   313600.0078   202269    6.49%     supplier-96 D   3301   3300     26
+   3328  2767   333344.8117     6   335353.1800   313601.6865   203749    6.49%     supplier-82 U   3328   3327     28
+   3360  2791   323215.5771    17   335353.1800   313630.0047   205579    6.48%     supplier-88 D   3360   3358     12
+   3390  2817   322099.0512    18   335353.1800   313647.8131   207513    6.47%     supplier-64 U   3390   3389     15
+   3425  2848   333691.6026     5   335353.1800   313656.2189   209200    6.47%      supplier-6 N   3425   3424     26
+   3452  2867   324238.3214    16   335353.1800   313687.5751   210980    6.46%     supplier-81 U   3452   3451     15
+   3474  2886   330838.9698     9   335353.1800   313688.6710   212668    6.46%     supplier-28 D   3474   3472     18
+   3508  2916   332359.5251     4   335353.1800   313695.1080   214400    6.46%     supplier-10 U   3508   3507     32
+   3537  2937   317525.6197    19   335353.1800   313732.7754   216048    6.45%     supplier-88 D   3537    925     12
+   3666  3046   320886.2771    19   335353.1800   313766.5247   222606    6.44%     supplier-36 D   3666     51     13
+Elapsed time = 83.64 sec. (95248.32 ticks, tree = 6.25 MB, solutions = 7)
+   3753  3118   321114.7571    17   335353.1800   313825.6901   229006    6.42%     supplier-81 U   3753   3752     15
+   3868  3215   333025.6682     2   335353.1800   313904.4162   235447    6.40%      supplier-6 U   3868   3867     29
+   3961  3288   325353.8052    15   335353.1800   313981.9196   241790    6.37%     supplier-82 D   3961   3960     17
+   4053  3360   326458.6855    17   335353.1800   314127.8815   247808    6.33%     supplier-64 U   4053   4052     13
+   4159  3448   330893.9906    14   335353.1800   314156.7332   253659    6.32%     supplier-53 N   4159   4158     19
+   4248  3521   333912.9380    13   335353.1800   314197.8172   259402    6.31%     supplier-28 N   4248   4247     20
+   4330  3588   317217.9801    17   335353.1800   314239.1908   264854    6.30%     supplier-36 U   4330   4329      7
+   4406  3652   333291.9366     8   335353.1800   314271.4562   269845    6.29%     supplier-15 U   4406   4404     22
+   4500  3726   321674.0758    17   335353.1800   314334.1371   275686    6.27%     supplier-61 D   4500   4499     13
+   4582  3788   317474.0816    17   335353.1800   314352.4987   280849    6.26%      supplier-4 D   4582    348     14
+Elapsed time = 106.47 sec. (133672.28 ticks, tree = 8.35 MB, solutions = 7)
+   4660  3854   331004.2410     9   335353.1800   314443.0449   286381    6.24%     supplier-65 D   4660   4659     23
+   4752  3928   325831.0242     8   335353.1800   314480.8814   291782    6.22%     supplier-58 U   4752   4751     23
+   4831  3991   325835.1564    16   335353.1800   314542.5709   296852    6.21%     supplier-77 D   4831   4830     12
+   4910  4054   329921.8885    11   335353.1800   314605.7245   302049    6.19%     supplier-53 U   4910   4909     17
+   4987  4114   328720.2758    14   335353.1800   314672.5167   307484    6.17%     supplier-39 U   4987   4986     19
+   5068  4179   325576.9488    20   335353.1800   314723.5801   312571    6.15%     supplier-81 U   5068   5067     13
+   5131  4230   331813.3466     9   335353.1800   314738.2679   317345    6.15%     supplier-82 D   5131   5129     18
+   5200  4281   319795.2072    20   335353.1800   314761.1342   321208    6.14%     supplier-91 D   5200   2191      9
+   5274  4337   318452.4854    18   335353.1800   314785.4397   326089    6.13%     supplier-88 D   5274    576     11
+   5338  4387   325908.3283    15   335353.1800   314816.2219   331110    6.12%     supplier-39 N   5338   5337     17
+Elapsed time = 128.61 sec. (172010.96 ticks, tree = 10.42 MB, solutions = 7)
+   5400  4433   323854.7157    16   335353.1800   314912.3538   335145    6.10%     supplier-64 U   5400   5399     15
+   5472  4493   331802.6060    10   335353.1800   314953.4043   339946    6.08%     supplier-72 D   5472   5471     23
+   5545  4550   320803.7798    20   335353.1800   315001.0397   344841    6.07%     supplier-23 U   5545   5544     12
+   5600  4593   320892.1120    19   335353.1800   315049.3956   348614    6.05%     supplier-63 U   5600   2540      7
+   5666  4644   322156.5340    16   335353.1800   315065.4020   353701    6.05%     supplier-63 D   5666   5665     12
+   5737  4695   319107.3601    19   335353.1800   315091.7299   358641    6.04%     supplier-94 U   5737   1711     12
+   5800  4746   328704.0764    16   335353.1800   315186.3028   363525    6.01%     supplier-28 N   5800   5798     17
+   5873  4801        cutoff         335353.1800   315192.2592   368297    6.01%     supplier-96 D   5873   5871     31
+   5935  4849   333207.8211     9   335353.1800   315210.2828   372985    6.01%     supplier-15 N   5935   5934     23
+   6000  4898   322871.5723    15   335353.1800   315275.1364   377415    5.99%     supplier-61 U   6000   5999     15
+Elapsed time = 149.20 sec. (210873.36 ticks, tree = 12.42 MB, solutions = 7)
+   6055  4937   329297.9904    12   335353.1800   315324.8798   381774    5.97%     supplier-82 N   6055   6054     19
+   6127  4993   322286.0823    17   335353.1800   315357.3682   386632    5.96%     supplier-91 U   6127   6126     14
+   6190  5044   330557.3561    12   335353.1800   315367.3637   391036    5.96%     supplier-39 N   6190   6188     17
+   6273  5107   324840.7291    17   335353.1800   315417.1526   395498    5.94%     supplier-61 D   6273   6272     14
+   6340  5162   325216.6598    15   335353.1800   315466.3819   400036    5.93%     supplier-77 D   6340   6339     15
+   6400  5210   334741.2600     0   335353.1800   315548.6645   404804    5.91%     supplier-82 N   6400   6398     17
+   6475  5269   330854.2102     5   335353.1800   315604.1637   409129    5.89%     supplier-10 N   6475   6474     24
+   6545  5323   334934.2928    10   335353.1800   315676.1797   413717    5.87%     supplier-82 U   6545   6544     20
+   6627  5389   318920.4264    21   335353.1800   315685.0210   418307    5.86%     supplier-88 U   6627   6626      8
+   6700  5450   333176.8900     0   335353.1800   315708.8985   423092    5.86%     supplier-53 N   6700   6697     19
+Elapsed time = 171.11 sec. (249697.86 ticks, tree = 14.48 MB, solutions = 7)
+   6760  5497   326790.0473    14   335353.1800   315720.5065   427483    5.85%     supplier-64 U   6760   6759     21
+   6825  5548   330130.1639     7   335353.1800   315749.2129   431901    5.85%     supplier-51 N   6825   6824     22
+   6901  5606   324830.9398    16   335353.1800   315777.6830   436100    5.84%     supplier-77 D   6901   6900     14
+   6967  5659   328113.3100    14   335353.1800   315833.5331   440541    5.82%     supplier-28 D   6967   6966     19
+   7042  5718   322991.3662    16   335353.1800   315871.8835   444960    5.81%     supplier-94 U   7042    533     13
+   7110  5774   334421.6500     0   335353.1800   315886.0248   449497    5.80%     supplier-10 N   7110   7109     26
+   7190  5836        cutoff         335353.1800   315908.0604   453713    5.80%     supplier-45 U   7190   7189     32
+   7255  5887   323480.3443    14   335353.1800   315954.4238   458145    5.78%      supplier-7 U   7255   7254     16
+   7308  5922   324591.5663    15   335353.1800   315980.3253   462502    5.78%     supplier-64 U   7308   7307     17
+   7373  5972   323743.4696    16   335353.1800   316014.4923   466940    5.77%     supplier-36 U   7373   7372     14
+Elapsed time = 191.99 sec. (288243.29 ticks, tree = 16.53 MB, solutions = 7)
+   7438  6021   325752.8829    14   335353.1800   316039.9709   471090    5.76%     supplier-82 U   7438   7437     19
+   7512  6077        cutoff         335353.1800   316067.6631   475180    5.75%     supplier-34 U   7512   7511     31
+   7566  6116   325707.4675    13   335353.1800   316105.5487   479564    5.74%     supplier-53 U   7566   7565     18
+   7633  6167   323907.0651    15   335353.1800   316164.7064   483919    5.72%     supplier-91 U   7633   7632     15
+   7696  6216   335334.2671     5   335353.1800   316167.9765   487938    5.72%     supplier-76 U   7696   7695     29
+   7758  6264   330079.8791     6   335353.1800   316200.0667   492169    5.71%     supplier-58 N   7758   7757     25
+   7824  6316   331380.1289    10   335353.1800   316233.4057   496493    5.70%     supplier-39 N   7824   7823     20
+   7879  6359   328732.1768    15   335353.1800   316253.8635   500575    5.70%     supplier-64 U   7879   7878     17
+   7940  6408   334796.6633    10   335353.1800   316258.3124   504691    5.69%     supplier-15 D   7940   7939     22
+   8000  6452   327042.3207    14   335353.1800   316273.6541   508721    5.69%     supplier-53 D   8000   7999     19
+Elapsed time = 213.33 sec. (326804.99 ticks, tree = 18.44 MB, solutions = 7)
+   8066  6505   334233.1615     7   335353.1800   316290.5787   512964    5.68%      supplier-6 N   8066   8065     27
+   8132  6555   322801.6232    17   335353.1800   316342.6022   517001    5.67%     supplier-36 U   8132   8131     14
+   8188  6593   324760.9056    18   335353.1800   316385.3097   521177    5.66%      supplier-7 D   8188   8187     15
+   8247  6632   326480.6398    14   335353.1800   316403.4327   525428    5.65%     supplier-91 U   8247   8246     17
+   8307  6680   328622.5584    14   335353.1800   316441.1670   529589    5.64%      supplier-7 N   8307   8305     17
+   8368  6726   328595.7478    13   335353.1800   316452.7636   533770    5.64%     supplier-28 N   8368   8367     17
+   8411  6755   322611.5091    18   335353.1800   316471.8951   537378    5.63%      supplier-7 D   8411   8410     13
+   8467  6797   329565.5003    14   335353.1800   316499.5900   541609    5.62%      supplier-7 D   8467   8466     16
+   8526  6843   334942.4184     8   335353.1800   316514.8224   545768    5.62%     supplier-78 N   8526   8525     24
+   8593  6892   319632.0115    20   335353.1800   316561.5906   549809    5.60%      supplier-4 D   8593    819      8
+Elapsed time = 233.70 sec. (365207.81 ticks, tree = 20.29 MB, solutions = 7)
+   8660  6947   325981.5741    12   335353.1800   316569.9834   553948    5.60%     supplier-64 U   8660   8659     16
+   8717  6993   327375.6784    13   335353.1800   316590.1361   557947    5.60%     supplier-53 D   8717   8716     20
+   8782  7044        cutoff         335353.1800   316609.9995   561893    5.59%     supplier-64 D   8782   8780     17
+   8845  7089   329312.4999    12   335353.1800   316624.6432   565862    5.58%     supplier-77 N   8845   8844     18
+   8900  7125   318142.6506    21   335353.1800   316664.6895   569927    5.57%     supplier-63 D   8900   8899      7
+   8956  7171   325630.2349    17   335353.1800   316671.1082   574054    5.57%     supplier-64 D   8956   8954     14
+   9009  7212   326089.1485    17   335353.1800   316674.2534   578122    5.57%      supplier-4 D   9009   9008     15
+   9068  7253   328493.3278    13   335353.1800   316688.4614   582289    5.57%     supplier-28 D   9068   9067     18
+   9135  7306   326395.0498    10   335353.1800   316741.2337   586416    5.55%     supplier-53 D   9135   9134     19
+   9193  7348   323363.5561    16   335353.1800   316779.9514   590456    5.54%     supplier-61 U   9193   9192     12
+Elapsed time = 254.27 sec. (403821.29 ticks, tree = 22.20 MB, solutions = 7)
+   9255  7398   329885.6849    12   335353.1800   316797.0032   594338    5.53%     supplier-39 N   9255   9254     19
+   9309  7440   328852.8399    16   335353.1800   316842.3225   598359    5.52%     supplier-53 N   9309   9306     17
+   9366  7479   326994.7600    15   335353.1800   316854.1930   602305    5.52%     supplier-77 N   9366   9365     15
+   9423  7522   325429.5017    19   335353.1800   316920.6767   606399    5.50%     supplier-77 D   9423   9422     10
+   9489  7570        cutoff         335353.1800   316923.2293   610450    5.50%     supplier-96 U   9489   9488     25
+   9550  7613   318654.5711    23   335353.1800   316992.7756   614291    5.47%     supplier-63 D   9550   9549      8
+   9610  7665   329631.5616    10   335353.1800   317001.8310   618080    5.47%     supplier-72 N   9610   9609     24
+   9679  7719   331287.1915     9   335353.1800   317008.9436   622014    5.47%     supplier-51 N   9679   9678     25
+Starting limited solution polishing.
+   9730  7757   332480.6232    15   335353.1800   317015.3823   625893    5.47%     supplier-64 N   9730   9729     18
+   9786  7795   332664.8481     8   335353.1800   317040.4470   630100    5.46%     supplier-78 N   9786   9784     21
+Elapsed time = 274.68 sec. (442232.08 ticks, tree = 24.15 MB, solutions = 7)
+   9837  7826   322799.0311    18   335353.1800   317064.9993   633744    5.45%     supplier-91 D   9837   9834     11
+   9888  7863   321558.1556    21   335353.1800   317069.4342   637631    5.45%     supplier-36 D   9888   2633     10
+   9941  7904   332918.5299    10   335353.1800   317078.0560   641452    5.45%     supplier-78 N   9941   9939     21
+  10001  7950   334708.4435    13   335353.1800   317118.0090   644699    5.44%     supplier-65 N  10001  10000     22
+  10059  7990   321859.2936    16   335353.1800   317130.6235   648541    5.43%     supplier-81 D  10059   3334     12
+  10118  8037   327644.6172    13   335353.1800   317172.9335   652383    5.42%     supplier-77 N  10118  10116     18
+  10174  8081   329198.5115    15   335353.1800   317179.1271   656174    5.42%      supplier-4 N  10174  10173     18
+  10230  8121   323493.3998    15   335353.1800   317193.3488   659770    5.42%     supplier-91 U  10230  10229     17
+  10294  8173   326639.0081    15   335353.1800   317207.7142   663535    5.41%     supplier-77 D  10294  10293     14
+  10347  8210   332382.7920    15   335353.1800   317217.9801   667076    5.41%     supplier-64 N  10347  10346     17
+Elapsed time = 296.57 sec. (480939.65 ticks, tree = 26.36 MB, solutions = 7)
+  10397  8246   335167.3411    13   335353.1800   317229.6629   670836    5.40%      supplier-4 N  10397  10396     20
+
+User cuts applied:  35528
+
+Root node processing (before b&c):
+  Real time             =    4.47 sec. (570.01 ticks)
+Sequential b&c:
+  Real time             =  294.55 sec. (485167.08 ticks)
+                          ------------
+Total (root+branch&cut) =  299.02 sec. (485737.09 ticks)
+
+
+Results statistics:
+	(a) Optimal objective value:				335353
+	(b) Relaxed objective value:				317234
+	(c) Number of branch-and-bound nodes:			10404
+	(d) CPX solving time:					298.959
+	(e) Total time:						299.943
+	(f) Number of Benders cuts for binary solution:		33600
+	(g) Number of Benders cuts for fractional solution:	1928
+
+Finish.
+
+
+Input parameters information:
+Solving setting:				3 (Benders framework plus initial cuts)
+Number of Customers:				1000
+Number of Suppliers:				100
+Budget (Cardinality restriction):		30
+Disaster Type:			1
+Quality of Service:				10
+Time limitation:				300
+Number of samplings:				100
+Random seed of graph generating:		1
+
+
+Generate graph start......
+Generate graph end. (time: 0.002901 s)
+
+
+Solve the network recovery problem under Benders decomposition framework......
+
+Build CPX formulation start......
+Build CPX formulation end. (time: 0.997945 s)
+
+CPX Solving Time Limit: 299.002
+Version identifier: 20.1.0.0 | 2020-11-10 | 9bedb6d68
+CPXPARAM_Preprocessing_Reduce                    1
+CPXPARAM_Preprocessing_Linear                    0
+CPXPARAM_Threads                                 1
+CPXPARAM_MIP_Strategy_CallbackReducedLP          0
+CPXPARAM_TimeLimit                               299.00205499999998
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+Legacy callback                                  LU
+Warning: Control callbacks may disable some MIP features.
+Tried aggregator 1 time.
+MIP Presolve modified 3791 coefficients.
+Reduced MIP has 201 rows, 149 columns, and 7295 nonzeros.
+Reduced MIP has 49 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (3.14 ticks)
+Probing time = 0.00 sec. (0.45 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: traditional branch-and-cut.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.00 sec. (2.19 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap         Variable B NodeID Parent  Depth
+
+      0     0   194137.8708    11                  59779.8800       89         
+*     0+    0                       322182.4600   194137.8708            39.74%
+      0     0   217205.8193    23   322182.4600     Cuts: 111      164   32.58%
+*     0+    0                       312658.6700   217205.8193            30.53%
+      0     0   231308.7462    23   312658.6700     Cuts: 108      310   26.02%
+*     0+    0                       305302.9300   231308.7462            24.24%
+      0     0   247380.1586    22   305302.9300      User: 99      493   18.97%
+*     0+    0                       303062.1700   247380.1586            18.37%
+      0     0   254398.7367    27   303062.1700      User: 94      624   16.06%
+*     0+    0                       299326.1200   254398.7367            15.01%
+      0     0   258794.1606    35   299326.1200      User: 74      768   13.54%
+*     0+    0                       294615.7800   258794.1606            12.16%
+      0     0   261147.2751    33   294615.7800      User: 60      879   11.36%
+      0     0   261624.6974    33   294615.7800      User: 50      926   11.20%
+*     0+    0                       288274.7000   261624.6974             9.24%
+      0     0   261860.5716    34   288274.7000      User: 32      960    9.16%
+      0     0   261891.7886    34   288274.7000      User: 12      982    9.15%
+      0     0   261903.9370    34   288274.7000       User: 6      993    9.15%
+      0     0   261906.7128    34   288274.7000       User: 2      997    9.15%
+*     0+    0                       286571.8600   261906.7128             8.61%
+*     0+    0                       285449.2700   261906.7128             8.25%
+      0     2   261906.7128    34   285449.2700   262094.0548      997    8.18%                        0             0
+Elapsed time = 6.07 sec. (577.47 ticks, tree = 0.01 MB, solutions = 9)
+*    10+   10                       282699.9500   262543.4715             7.13%
+     16    18   268951.5470    28   282699.9500   262543.4715     2045    7.13%     supplier-63 N     16     13     11
+*    20+   20                       281232.4300   262543.4715             6.65%
+     40    42   278278.6929    12   281232.4300   262543.4715     3895    6.65%     supplier-82 N     40     38     26
+     77    73   272244.6309    17   281232.4300   263022.6192     4979    6.48%      supplier-6 U     77     76     16
+     93    89   279630.6526    12   281232.4300   263022.6192     5677    6.48%     supplier-97 D     93     92     27
+*   120+  108                       280310.3400   263082.3043             6.15%
+    120   110   268883.8161    14   280310.3400   263082.3043     6349    6.15%      supplier-7 D    120    119     20
+    140   127   265131.9428    32   280310.3400   263280.5870     6864    6.08%     supplier-23 U    140    139      5
+    174   157   263618.7035    32   280310.3400   263442.8525     8014    6.02%     supplier-23 D    174    104      5
+    203   182   265303.4832    28   280310.3400   263631.1822     9067    5.95%      supplier-4 D    203      7      6
+    222   201   271149.4962    19   280310.3400   263631.1822    10049    5.95%     supplier-36 U    222    221     19
+    331   296        cutoff         280310.3400   263720.6399    13418    5.92%     supplier-97 D    331    330     34
+Elapsed time = 22.09 sec. (3827.23 ticks, tree = 0.63 MB, solutions = 12)
+    420   373   271916.4421    17   280310.3400   263824.9691    16698    5.88%      supplier-6 U    420    419     20
+    515   456   271966.3209    16   280310.3400   263919.4367    19680    5.85%     supplier-64 U    515    514     20
+*   520+  455                       280093.6500   263919.4367             5.77%
+    580   509   268512.0017    18   280093.6500   264122.9497    21965    5.70%     supplier-21 U    580    579     16
+    634   559   279563.5764     2   280093.6500   264165.1767    23827    5.69%     supplier-10 U    634    633     38
+*   680+  569                       278979.6200   264354.2245             5.24%
+    697   582        cutoff         278979.6200   264354.2245    25988    5.24%     supplier-98 D    697    695     36
+    747   626   268357.0497    26   278979.6200   264542.2178    28392    5.18%     supplier-63 D    747    746     12
+    780   655   273388.2181    17   278979.6200   264549.8192    29789    5.17%     supplier-91 U    780    779     19
+    840   707   270991.4303    25   278979.6200   264610.1431    31526    5.15%     supplier-64 U    840    839     13
+    900   757   268440.8546    23   278979.6200   264699.8779    34108    5.12%     supplier-36 U    900    899     14
+    960   809   270405.7644    21   278979.6200   264813.6267    36367    5.08%     supplier-21 U    960    959     16
+Elapsed time = 35.94 sec. (13815.16 ticks, tree = 1.76 MB, solutions = 14)
+   1028   863   267914.8752    29   278979.6200   264941.5901    39196    5.03%     supplier-61 U   1028   1027      7
+   1096   923   275076.8547    14   278979.6200   265014.8245    41942    5.01%     supplier-77 D   1096   1095     24
+   1156   973   273862.7904    20   278979.6200   265077.5113    44219    4.98%     supplier-82 U   1156   1155     17
+   1216  1021   269373.7131    27   278979.6200   265103.4755    46726    4.97%     supplier-63 D   1216   1215     11
+   1270  1068   274972.1189    15   278979.6200   265138.0642    49337    4.96%     supplier-82 U   1270   1269     21
+   1347  1135        cutoff         278979.6200   265161.8579    52212    4.95%     supplier-49 D   1347   1346     40
+   1414  1192   272380.6903    18   278979.6200   265215.2629    54703    4.93%     supplier-94 U   1414   1413     16
+   1482  1252   271976.1815    19   278979.6200   265239.9783    57234    4.92%     supplier-21 U   1482   1481     18
+   1543  1305   277364.6772    11   278979.6200   265280.6102    59720    4.91%     supplier-34 U   1543   1542     27
+   1595  1349   276266.1244    13   278979.6200   265332.4423    62554    4.89%     supplier-53 U   1595   1593     24
+Elapsed time = 42.34 sec. (23433.80 ticks, tree = 3.06 MB, solutions = 14)
+   1663  1406        cutoff         278979.6200   265420.6075    64836    4.86%     supplier-68 U   1663   1661     28
+   1721  1456   272259.9274    24   278979.6200   265470.6272    67474    4.84%     supplier-61 D   1721   1719     14
+   1778  1503   276881.4163    10   278979.6200   265488.9869    70087    4.84%     supplier-39 U   1778   1777     26
+   1849  1563   268959.7625    24   278979.6200   265542.1477    72770    4.82%     supplier-63 D   1849   1847     13
+   1910  1618   277422.3491     4   278979.6200   265550.9250    75288    4.81%     supplier-44 D   1910   1909     37
+   1980  1674   269171.0121    26   278979.6200   265564.4574    77587    4.81%     supplier-63 D   1980   1979     11
+   2042  1728   272272.2283    16   278979.6200   265573.6397    80282    4.81%     supplier-62 U   2042   2041     20
+   2105  1782   278283.4442    11   278979.6200   265598.0552    82926    4.80%     supplier-68 U   2105   2104     30
+   2171  1835   267605.2282    24   278979.6200   265675.5561    85609    4.77%     supplier-61 D   2171    181     13
+   2228  1884   270274.8180    24   278979.6200   265691.6400    87957    4.76%     supplier-21 U   2228   2227     12
+Elapsed time = 47.75 sec. (33059.16 ticks, tree = 4.07 MB, solutions = 14)
+   2281  1929   270828.2971    26   278979.6200   265709.5661    90355    4.76%     supplier-21 D   2281   2279      7
+   2339  1979   277559.5140    14   278979.6200   265722.3825    92978    4.75%     supplier-82 N   2339   2338     24
+   2407  2034   269019.0442    22   278979.6200   265751.0576    95541    4.74%     supplier-51 U   2407   2405     14
+   2466  2085   270820.7205    24   278979.6200   265762.5140    98160    4.74%     supplier-51 U   2466   2465     13
+   2533  2144   275839.7262    16   278979.6200   265780.8444   100671    4.73%     supplier-15 U   2533   2532     25
+   2604  2203   268944.5259    29   278979.6200   265796.7803   103193    4.73%     supplier-96 D   2604   2603      8
+   2673  2262   273483.2335    14   278979.6200   265823.0567   105663    4.72%     supplier-75 D   2673   2672     20
+   2740  2320   274315.0885    16   278979.6200   265873.1672   108268    4.70%     supplier-53 U   2740   2739     20
+   2800  2373   278138.5329    11   278979.6200   265948.0088   110671    4.67%     supplier-39 N   2800   2799     28
+   2871  2428   272294.6204    20   278979.6200   265978.1932   113321    4.66%     supplier-64 U   2871   2870     16
+Elapsed time = 53.06 sec. (42750.44 ticks, tree = 5.18 MB, solutions = 14)
+   2926  2476   278965.9877     9   278979.6200   265997.8927   115966    4.65%     supplier-34 D   2926   2925     31
+   2972  2514   276147.1242    15   278979.6200   266033.8916   118550    4.64%     supplier-99 U   2972   2971     23
+*  3035  2446      integral     0   278297.2800   266064.0961   120743    4.40%
+   3040  2449   271048.1155    24   278297.2800   266068.0565   121099    4.39%     supplier-75 D   3040   3039     13
+   3083  2483   275707.7967    21   278297.2800   266099.1276   123516    4.38%     supplier-64 D   3083   3081     17
+   3132  2524   277271.5950    12   278297.2800   266116.6121   125720    4.38%     supplier-15 U   3132   3131     26
+   3198  2579   273209.4294    21   278297.2800   266133.5041   128239    4.37%     supplier-28 D   3198   3196     12
+   3264  2636   274971.9762    18   278297.2800   266173.4004   130347    4.36%     supplier-36 D   3264   3263     20
+   3318  2678   272697.0399    23   278297.2800   266178.4794   132756    4.35%     supplier-28 U   3318   3317     11
+   3370  2719   276611.2702    16   278297.2800   266185.5895   135178    4.35%     supplier-68 D   3370   3369     25
+   3430  2769   271320.0121    22   278297.2800   266190.5414   137791    4.35%     supplier-28 D   3430   3427     16
+Elapsed time = 58.41 sec. (52436.26 ticks, tree = 6.03 MB, solutions = 15)
+   3496  2827   277214.3895    12   278297.2800   266233.9799   140331    4.33%     supplier-15 N   3496   3495     24
+   3564  2883   274896.1281    16   278297.2800   266269.6706   142605    4.32%     supplier-82 U   3564   3563     17
+   3631  2938   268568.9171    23   278297.2800   266296.6162   144871    4.31%     supplier-96 D   3631   3630     15
+   3697  2996   270394.6661    22   278297.2800   266331.9198   147356    4.30%      supplier-4 D   3697   3695     15
+   3750  3041   270298.8045    20   278297.2800   266346.2198   149869    4.29%     supplier-99 N   3750   3749     15
+   3812  3097   277029.1276    11   278297.2800   266374.7395   152155    4.28%     supplier-39 U   3812   3811     28
+   3868  3143   274242.7968    17   278297.2800   266388.9649   154765    4.28%     supplier-36 U   3868   3867     22
+   3921  3188   277156.2772    15   278297.2800   266402.1649   157119    4.27%     supplier-15 U   3921   3920     25
+   3967  3226   277284.3971    12   278297.2800   266408.8876   159370    4.27%     supplier-15 N   3967   3965     25
+   4022  3267   266799.5085    26   278297.2800   266443.3385   161529    4.26%     supplier-96 U   4022   2374     12
+Elapsed time = 63.18 sec. (62095.56 ticks, tree = 7.34 MB, solutions = 15)
+   4070  3308   270186.7224    25   278297.2800   266476.1816   163811    4.25%     supplier-88 U   4070   4069     11
+   4126  3356   270704.0984    22   278297.2800   266509.2751   166040    4.24%     supplier-63 N   4126   4125     15
+   4177  3399   276687.2259    13   278297.2800   266529.9916   168244    4.23%     supplier-82 D   4177   4176     22
+   4224  3434   276002.2192    13   278297.2800   266543.2010   170576    4.22%     supplier-68 D   4224   4223     25
+   4291  3488   267822.6025    25   278297.2800   266545.8833   172599    4.22%     supplier-61 D   4291   1376     13
+   4350  3539   269433.5569    23   278297.2800   266557.5193   174618    4.22%     supplier-23 U   4350   4349     13
+   4410  3592   269591.5407    20   278297.2800   266563.2658   176546    4.22%     supplier-61 U   4410   4409     17
+   4453  3627   272555.1383    21   278297.2800   266570.1176   178665    4.21%     supplier-61 U   4453   4451     16
+   4508  3673   274403.5634    17   278297.2800   266582.3869   180981    4.21%     supplier-53 D   4508   4507     20
+   4550  3707   275709.9806    16   278297.2800   266591.9492   183288    4.21%     supplier-53 U   4550   4549     19
+Elapsed time = 68.04 sec. (71807.39 ticks, tree = 8.33 MB, solutions = 15)
+   4599  3740   267777.3170    27   278297.2800   266618.6330   185563    4.20%     supplier-63 D   4599   4598     12
+   4640  3774   272897.2471    18   278297.2800   266625.8109   187719    4.19%     supplier-64 U   4640   4639     18
+   4690  3817   277001.5272    12   278297.2800   266631.8765   189891    4.19%     supplier-68 D   4690   4689     27
+   4746  3859   270011.0118    26   278297.2800   266644.4014   191851    4.19%     supplier-26 D   4746   2690     10
+   4793  3896   271177.3473    26   278297.2800   266654.8448   194110    4.18%     supplier-63 D   4793   4792     11
+   4839  3935   271892.7450    19   278297.2800   266677.2879   196161    4.18%     supplier-36 U   4839   4838     19
+   4883  3969   273142.4495    24   278297.2800   266700.6198   198126    4.17%     supplier-75 D   4883   4881     14
+   4929  4007   274134.4505    15   278297.2800   266710.3166   200408    4.16%     supplier-62 D   4929   4928     21
+   4987  4053   272242.3899    21   278297.2800   266744.3794   202636    4.15%     supplier-23 U   4987   4986     14
+   5037  4095   273782.2281    17   278297.2800   266772.0319   204894    4.14%     supplier-51 U   5037   5036     19
+Elapsed time = 72.77 sec. (81532.65 ticks, tree = 9.12 MB, solutions = 15)
+   5089  4135   271308.3063    21   278297.2800   266779.7671   207033    4.14%     supplier-64 U   5089   5088     16
+   5129  4167   269142.0435    25   278297.2800   266789.4501   209295    4.14%     supplier-23 D   5129   3139     12
+   5180  4210   272512.2276    19   278297.2800   266795.7603   211382    4.13%     supplier-64 U   5180   5179     19
+   5232  4252   269660.6739    27   278297.2800   266799.1811   213935    4.13%     supplier-21 D   5232   3974     10
+   5288  4301   273463.6187    14   278297.2800   266825.6716   216049    4.12%     supplier-62 U   5288   5287     21
+   5336  4339   277059.0977    18   278297.2800   266833.3458   218229    4.12%     supplier-64 N   5336   5334     19
+   5386  4380   278223.4785    10   278297.2800   266835.8198   220262    4.12%     supplier-77 N   5386   5385     27
+   5436  4418   270340.5562    27   278297.2800   266858.1128   222101    4.11%     supplier-28 D   5436   5434      7
+   5494  4467   268644.8303    21   278297.2800   266861.7851   224320    4.11%     supplier-82 U   5494   5493     15
+   5687  4622   268225.5988    24   278297.2800   266894.3290   233135    4.10%     supplier-36 D   5687   1318     12
+Elapsed time = 78.85 sec. (94149.05 ticks, tree = 11.51 MB, solutions = 15)
+   5889  4787   271344.2696    18   278297.2800   266928.9712   242023    4.08%     supplier-99 U   5889   5888     18
+   6070  4929   269810.6128    20   278297.2800   266975.1873   250204    4.07%     supplier-36 U   6070   6069     17
+   6280  5103   277173.1281     9   278297.2800   267011.2177   258411    4.06%     supplier-39 U   6280   6279     30
+   6470  5250   272892.9568    15   278297.2800   267062.6150   266946    4.04%     supplier-23 U   6470   6469     19
+   6688  5434   276181.9013    18   278297.2800   267126.3294   275753    4.01%      supplier-7 D   6688   6687     19
+   6881  5585   277596.0302    12   278297.2800   267162.4982   283722    4.00%     supplier-10 N   6881   6880     28
+   7074  5737   269862.0023    20   278297.2800   267218.0465   292103    3.98%     supplier-82 U   7074   7073     15
+   7262  5892   274911.5561    16   278297.2800   267252.3638   300669    3.97%     supplier-77 D   7262   7260     21
+   7483  6067   269367.6179    19   278297.2800   267318.1071   309034    3.95%     supplier-99 U   7483   7481     16
+   7669  6216   274958.2899    22   278297.2800   267346.1856   317162    3.94%     supplier-82 U   7669   7668     17
+Elapsed time = 97.42 sec. (132459.61 ticks, tree = 15.83 MB, solutions = 15)
+   7865  6373   269273.7507    23   278297.2800   267394.6705   325085    3.92%      supplier-4 U   7865   7864     13
+   8045  6520   272313.2652    21   278297.2800   267428.1225   333225    3.91%     supplier-82 U   8045   8044     16
+   8240  6677   271441.4353    25   278297.2800   267461.7209   341484    3.89%     supplier-26 D   8240   8238     13
+   8437  6834   277795.8836     8   278297.2800   267497.9889   349689    3.88%     supplier-91 D   8437   8436     27
+   8623  6978   272816.0630    16   278297.2800   267529.5023   357917    3.87%      supplier-7 D   8623   8622     22
+   8787  7102   272559.1917    19   278297.2800   267583.1705   366255    3.85%     supplier-28 U   8787   8786     18
+   8955  7236   277074.7053    13   278297.2800   267612.9327   374087    3.84%     supplier-77 N   8955   8954     24
+   9142  7382   275646.4108    16   278297.2800   267657.3089   382169    3.82%      supplier-7 D   9142   9141     21
+   9326  7524   271951.6254    19   278297.2800   267693.9043   390174    3.81%     supplier-61 U   9326   9325     17
+   9500  7662   276163.5390    15   278297.2800   267739.8837   398517    3.79%     supplier-53 U   9500   9499     20
+Elapsed time = 115.49 sec. (170781.33 ticks, tree = 19.40 MB, solutions = 15)
+   9680  7801   272865.0167    22   278297.2800   267767.5176   406463    3.78%     supplier-82 U   9680   9679     15
+   9850  7938   274035.7511    20   278297.2800   267798.4266   414796    3.77%     supplier-82 N   9850   9848     17
+  10030  8080   275996.1842    11   278297.2800   267837.5644   422549    3.76%     supplier-15 U  10030  10029     26
+  10240  8248   272982.9471    13   278297.2800   267891.9112   430738    3.74%     supplier-51 D  10240  10239     22
+  10420  8387   273659.4840    17   278297.2800   267918.8180   438705    3.73%     supplier-36 U  10420  10419     22
+  10606  8529   271644.6891    23   278297.2800   267942.6602   446617    3.72%     supplier-21 D  10606   9301     14
+  10802  8691   269027.9157    25   278297.2800   267976.0983   454446    3.71%     supplier-28 U  10802  10801     13
+  10980  8833   277687.5669     8   278297.2800   267991.1051   462409    3.70%     supplier-34 U  10980  10978     29
+  11170  8980   271431.9188    20   278297.2800   268021.0343   470277    3.69%     supplier-64 U  11170  11168     18
+  11350  9123   271689.8187    26   278297.2800   268063.2483   478139    3.68%     supplier-81 U  11350  11349     12
+Elapsed time = 132.72 sec. (209205.36 ticks, tree = 23.08 MB, solutions = 15)
+  11525  9262   277704.4242    12   278297.2800   268076.6104   486012    3.67%     supplier-77 N  11525  11524     24
+  11691  9389   270658.0702    17   278297.2800   268102.9815   493527    3.66%     supplier-64 D  11691    117     18
+  11879  9542   272127.7827    18   278297.2800   268127.3903   501109    3.65%     supplier-62 U  11879  11878     21
+  12064  9689   277807.1248     9   278297.2800   268144.8557   509138    3.65%      supplier-6 N  12064  12062     28
+  12246  9833   275303.7806    13   278297.2800   268170.5568   517213    3.64%     supplier-53 U  12246  12244     22
+  12428  9973   274928.2422    15   278297.2800   268212.1733   525209    3.62%      supplier-7 D  12428  12426     22
+  12630 10133   270450.6362    22   278297.2800   268230.3002   533093    3.62%      supplier-4 U  12630  12629     15
+  12800 10265   277928.0000    11   278297.2800   268254.4057   541250    3.61%     supplier-68 N  12800  12799     25
+  12986 10411   271704.8921    22   278297.2800   268272.5311   549373    3.60%     supplier-53 N  12986    211     12
+  13168 10548   272571.6234    22   278297.2800   268289.8048   557332    3.60%     supplier-21 N  13168   3118     13
+Elapsed time = 149.88 sec. (247520.35 ticks, tree = 27.01 MB, solutions = 15)
+  13337 10681   277470.1233    11   278297.2800   268301.5221   565080    3.59%     supplier-34 N  13337  13336     28
+  13517 10809   271952.2401    25   278297.2800   268321.7421   573195    3.58%     supplier-21 N  13517   2954     13
+  13684 10930   277637.5439    18   278297.2800   268351.2343   580961    3.57%     supplier-64 U  13684  13683     17
+  13855 11056   277430.1361    12   278297.2800   268376.0675   588909    3.56%     supplier-91 U  13855  13854     24
+  14037 11194   273995.4407    16   278297.2800   268400.7686   596726    3.56%     supplier-62 U  14037  14036     21
+  14245 11363   277965.7850    13   278297.2800   268430.2358   604596    3.55%     supplier-15 U  14245  14244     25
+  14423 11494   272186.5191    17   278297.2800   268451.0040   612134    3.54%     supplier-51 D  14423  14422     19
+  14609 11643        cutoff         278297.2800   268477.7679   620076    3.53%     supplier-15 U  14609  14608     27
+  14775 11764   270268.0256    23   278297.2800   268503.5310   627859    3.52%      supplier-4 U  14775  14774     13
+  14949 11899   271484.0615    15   278297.2800   268527.5710   635681    3.51%     supplier-64 U  14949  14948     21
+Elapsed time = 167.38 sec. (285768.23 ticks, tree = 30.40 MB, solutions = 15)
+  15151 12059   276240.0904    16   278297.2800   268544.5975   643286    3.50%     supplier-68 N  15151  15150     25
+  15330 12198   273354.2586    22   278297.2800   268564.9121   650876    3.50%     supplier-36 U  15330  15329     12
+  15503 12332   273431.1869    17   278297.2800   268578.8615   658697    3.49%     supplier-64 U  15503  15502     19
+  15656 12440   270649.9530    19   278297.2800   268600.6685   666690    3.48%     supplier-28 N  15656  15655     17
+  15826 12568   272876.3562    19   278297.2800   268624.5439   674392    3.48%     supplier-99 D  15826  15823     17
+  15993 12698   271018.7246    22   278297.2800   268640.7107   682283    3.47%     supplier-82 U  15993  15992     16
+  16179 12840   277175.6052    12   278297.2800   268664.1869   690072    3.46%     supplier-34 U  16179  16178     28
+  16360 12976   270539.0923    24   278297.2800   268688.8679   697657    3.45%     supplier-23 N  16360   2732     13
+  16523 13097   268821.4963    24   278297.2800   268697.7643   705184    3.45%     supplier-96 U  16523   8485     14
+  16681 13214   277305.8106    20   278297.2800   268713.6306   713190    3.44%      supplier-4 N  16681  16680     18
+Elapsed time = 183.99 sec. (324049.76 ticks, tree = 33.69 MB, solutions = 15)
+  16850 13337   272251.5165    22   278297.2800   268742.6191   720887    3.43%     supplier-28 N  16850    216     16
+  17015 13465   277558.3041    10   278297.2800   268759.7845   728723    3.43%     supplier-67 N  17015  17014     29
+  17200 13604   270481.3955    22   278297.2800   268775.8564   736407    3.42%     supplier-36 N  17200  17199     14
+  17388 13751   273115.0965    20   278297.2800   268788.6916   744276    3.42%     supplier-75 D  17388  17387     16
+  17553 13876   272303.2810    22   278297.2800   268804.2973   752190    3.41%     supplier-64 N  17553    612     17
+  17720 14007   277087.2013    12   278297.2800   268818.4061   759770    3.41%     supplier-62 N  17720  17718     24
+  17900 14144   273970.0752    15   278297.2800   268828.3309   767510    3.40%     supplier-51 U  17900  17898     21
+  18087 14292   274587.2695    21   278297.2800   268833.9053   775059    3.40%     supplier-36 N  18087  18085     17
+  18279 14438   271244.9029    20   278297.2800   268850.4487   782703    3.39%     supplier-99 N  18279   2174     17
+  18463 14579   272348.8066    23   278297.2800   268873.5750   790553    3.39%     supplier-88 N  18463   7071     13
+Elapsed time = 201.16 sec. (362585.88 ticks, tree = 36.86 MB, solutions = 15)
+  18640 14711   271026.7834    24   278297.2800   268896.3455   798130    3.38%     supplier-28 U  18640  18639     13
+  18820 14845   273947.3274    19   278297.2800   268916.8078   805800    3.37%     supplier-94 U  18820  18819     15
+* 18920+14754                       278142.3800   268922.1840             3.31%
+  18989 14815   271403.8926    23   278142.3800   268927.5900   812271    3.31%     supplier-23 U  18989  18988     16
+* 19020+14400                       277896.2000   268927.7736             3.23%
+  19120 14477   272885.5727    23   277896.2000   268933.0004   818191    3.23%     supplier-28 N  19120  19119     15
+  19272 14586   276175.0624    11   277896.2000   268945.9545   825450    3.22%     supplier-15 U  19272  19271     27
+  19404 14681   275632.7291    16   277896.2000   268956.1789   831858    3.22%     supplier-91 U  19404  19403     24
+  19578 14808   272816.0355    21   277896.2000   268967.9380   839609    3.21%     supplier-99 U  19578  19577     13
+  19730 14922   272203.0102    24   277896.2000   268989.0101   847091    3.21%     supplier-21 N  19730   3908     13
+  19900 15052   277753.2543     8   277896.2000   269004.6347   854647    3.20%     supplier-67 N  19900  19899     29
+  20068 15180   274974.9382    17   277896.2000   269030.9951   861931    3.19%     supplier-82 U  20068  20067     18
+Elapsed time = 218.67 sec. (401009.62 ticks, tree = 38.46 MB, solutions = 17)
+  20258 15326   274322.0510    23   277896.2000   269049.6828   869015    3.18%     supplier-63 D  20258  20257     13
+  20432 15461        cutoff         277896.2000   269059.5109   876195    3.18%      supplier-1 U  20432  20430     33
+  20588 15574   273432.9116    18   277896.2000   269071.3773   883524    3.18%     supplier-64 U  20588  20587     19
+  20737 15681   273089.2792    18   277896.2000   269090.7839   890488    3.17%     supplier-51 U  20737  20736     19
+  20900 15803   276383.1230    16   277896.2000   269100.9411   898055    3.16%     supplier-91 N  20900  20899     23
+  21068 15925   271231.3970    24   277896.2000   269132.9956   905539    3.15%     supplier-36 U  21068  21067     10
+  21222 16041   277407.1851    11   277896.2000   269143.9617   912550    3.15%      supplier-6 U  21222  21221     26
+  21399 16172   273698.0942    18   277896.2000   269154.2907   920199    3.15%     supplier-64 U  21399  21398     17
+  21571 16299   276136.9551    13   277896.2000   269167.5152   927874    3.14%     supplier-34 U  21571  21570     28
+  21744 16433   277255.7501    16   277896.2000   269177.7321   935324    3.14%     supplier-53 N  21744  21742     19
+Elapsed time = 235.56 sec. (439259.13 ticks, tree = 41.98 MB, solutions = 17)
+  21919 16559   270733.7925    23   277896.2000   269194.3120   943005    3.13%      supplier-4 N  21919  13592     11
+  22102 16698   273772.7983    20   277896.2000   269207.4526   950537    3.13%     supplier-23 N  22102  22101     16
+  22285 16831   272752.7741    25   277896.2000   269219.8625   958279    3.12%     supplier-21 U  22285  22284     10
+  22435 16939   276483.4296    15   277896.2000   269233.2787   966029    3.12%     supplier-64 U  22435  22434     19
+  22604 17060   271636.9290    20   277896.2000   269257.6580   973568    3.11%     supplier-63 D  22604  22603     17
+  22781 17196   274870.9524    19   277896.2000   269268.0954   981106    3.10%      supplier-4 U  22781  22780     16
+  22949 17316   276622.2810    18   277896.2000   269279.4728   988863    3.10%     supplier-36 N  22949  22948     16
+  23140 17455   275811.2425    16   277896.2000   269305.5038   996488    3.09%     supplier-62 U  23140  23139     20
+  23320 17591   277357.2769    13   277896.2000   269316.1245  1003727    3.09%      supplier-7 D  23320  23319     24
+  23500 17729        cutoff         277896.2000   269329.0971  1011334    3.08%     supplier-72 D  23500  23499     31
+Elapsed time = 252.64 sec. (477472.91 ticks, tree = 45.05 MB, solutions = 17)
+  23661 17850   276775.9322    12   277896.2000   269338.2977  1018787    3.08%      supplier-6 U  23661  23660     27
+  23824 17960   272571.1670    24   277896.2000   269353.8690  1026701    3.07%     supplier-21 D  23824  16863     15
+  23984 18079   276784.9117    11   277896.2000   269364.2319  1034215    3.07%     supplier-91 D  23984  23982     24
+  24144 18198   277366.5981    11   277896.2000   269371.3234  1041802    3.07%     supplier-72 N  24144  24143     27
+  24296 18299   270932.7068    22   277896.2000   269381.5466  1049290    3.06%     supplier-94 N  24296  11733     15
+  24483 18437   271202.5627    20   277896.2000   269394.8063  1056880    3.06%     supplier-99 N  24483   1087     16
+  24651 18561   274688.9981    14   277896.2000   269409.1456  1064771    3.05%     supplier-91 N  24651    258     22
+  24820 18682   272748.4899    19   277896.2000   269423.8295  1072087    3.05%     supplier-99 U  24820  24818     19
+  24981 18800   275829.0812    18   277896.2000   269438.8641  1079541    3.04%     supplier-82 N  24981  24979     20
+  25150 18918   273364.7761    18   277896.2000   269447.1677  1087348    3.04%     supplier-23 D  25150  25149     20
+Elapsed time = 269.41 sec. (515855.22 ticks, tree = 48.01 MB, solutions = 17)
+Starting limited solution polishing.
+  25316 19034   271124.2642    22   277896.2000   269459.4701  1094619    3.04%     supplier-82 N  25316   1670     16
+  25480 19157   273149.5933    18   277896.2000   269471.5203  1102224    3.03%     supplier-99 D  25480  25479     18
+  25653 19279        cutoff         277896.2000   269481.6864  1109487    3.03%     supplier-62 U  25653  25651     21
+  25831 19416   271739.0302    21   277896.2000   269495.5682  1116949    3.02%     supplier-51 N  25831   2892     15
+  26005 19543   276642.2137    12   277896.2000   269503.7913  1124332    3.02%     supplier-68 N  26005  26004     25
+  26170 19660   274555.1485    16   277896.2000   269510.9570  1131811    3.02%     supplier-53 D  26170  26169     22
+  26334 19788   272389.7339    20   277896.2000   269521.4591  1138945    3.01%     supplier-61 U  26334  26333     16
+  26502 19917   271872.1609    29   277896.2000   269528.1253  1145861    3.01%     supplier-61 U  26502  26501      7
+  26670 20043   271595.4519    19   277896.2000   269534.6994  1153465    3.01%     supplier-99 U  26670  26669     20
+  26836 20160   274544.3313    16   277896.2000   269541.6104  1161234    3.01%     supplier-82 U  26836  26835     20
+Elapsed time = 286.41 sec. (554213.67 ticks, tree = 51.37 MB, solutions = 17)
+  26994 20271   275999.4920    14   277896.2000   269549.0496  1168566    3.00%     supplier-91 U  26994  26993     24
+  27175 20401   272065.0901    23   277896.2000   269567.4127  1176291    3.00%     supplier-61 U  27175  27174     13
+  27334 20520   277172.3146    13   277896.2000   269575.3449  1183773    2.99%     supplier-68 U  27334  27333     25
+  27505 20644   271484.2515    20   277896.2000   269584.3561  1190973    2.99%     supplier-99 N  27505   5886     17
+  27676 20765   271939.0612    23   277896.2000   269598.0315  1198522    2.99%      supplier-4 U  27676  27675     14
+  27840 20881   271237.6466    23   277896.2000   269610.3405  1205866    2.98%      supplier-4 N  27840   3910     15
+  28009 21000   271748.1992    20   277896.2000   269621.9618  1213231    2.98%     supplier-82 U  28009  28007     15
+
+User cuts applied:  18085
+
+Root node processing (before b&c):
+  Real time             =    6.07 sec. (578.14 ticks)
+Sequential b&c:
+  Real time             =  292.94 sec. (582106.57 ticks)
+                          ------------
+Total (root+branch&cut) =  299.00 sec. (582684.71 ticks)
+
+
+Results statistics:
+	(a) Optimal objective value:				277896
+	(b) Relaxed objective value:				269625
+	(c) Number of branch-and-bound nodes:			28075
+	(d) CPX solving time:					298.981
+	(e) Total time:						299.979
+	(f) Number of Benders cuts for binary solution:		16554
+	(g) Number of Benders cuts for fractional solution:	1531
+
+Finish.
+
+
+Input parameters information:
+Solving setting:				3 (Benders framework plus initial cuts)
+Number of Customers:				1000
+Number of Suppliers:				100
+Budget (Cardinality restriction):		40
+Disaster Type:			1
+Quality of Service:				10
+Time limitation:				300
+Number of samplings:				100
+Random seed of graph generating:		1
+
+
+Generate graph start......
+Generate graph end. (time: 0.002568 s)
+
+
+Solve the network recovery problem under Benders decomposition framework......
+
+Build CPX formulation start......
+Build CPX formulation end. (time: 0.999106 s)
+
+CPX Solving Time Limit: 299.001
+Version identifier: 20.1.0.0 | 2020-11-10 | 9bedb6d68
+CPXPARAM_Preprocessing_Reduce                    1
+CPXPARAM_Preprocessing_Linear                    0
+CPXPARAM_Threads                                 1
+CPXPARAM_MIP_Strategy_CallbackReducedLP          0
+CPXPARAM_TimeLimit                               299.00089400000002
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+Legacy callback                                  LU
+Warning: Control callbacks may disable some MIP features.
+Tried aggregator 1 time.
+MIP Presolve modified 3562 coefficients.
+Reduced MIP has 201 rows, 149 columns, and 7295 nonzeros.
+Reduced MIP has 49 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (1.70 ticks)
+Probing time = 0.00 sec. (0.47 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: traditional branch-and-cut.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.00 sec. (1.47 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap         Variable B NodeID Parent  Depth
+
+      0     0    13159.4182     2                  13159.4182       43         
+*     0+    0                       266443.1500    13159.4182            95.06%
+      0     2   243256.2706    13   266443.1500   243302.2104       43    8.69%                        0             0
+Elapsed time = 1.47 sec. (41.92 ticks, tree = 0.01 MB, solutions = 1)
+*    10+    8                       263386.0700   259981.5500             1.29%
+*    20+   18                       262112.6500   259981.5500             0.81%
+*   150+  127                       262036.2600   259981.5500             0.78%
+    180   156   261231.9767     9   262036.2600   259981.5500     1062    0.78%     supplier-11 U    180    177     25
+*   250+  184                       261461.0600   260011.7100             0.55%
+    430   299   261441.9714     6   261461.0600   260084.1900     2642    0.53%     supplier-97 D    430    428     28
+    692   476   261387.7520     7   261461.0600   260201.5100     4026    0.48%     supplier-64 D    692    690     27
+    978   636        cutoff         261461.0600   260286.0165     5775    0.45%     supplier-36 D    978    976     23
+   1267   777   261452.7324     8   261461.0600   260382.2700     7527    0.41%     supplier-88 D   1267     87     21
+   1555   902   260896.5709     8   261461.0600   260446.7076     9528    0.39%     supplier-64 U   1555   1554     23
+   1828   967   261075.4183     7   261461.0600   260572.3600    11837    0.34%      supplier-1 N   1828     53     19
+   2108   996   260698.9900     9   261461.0600   260698.9900    13959    0.29%     supplier-63 U   2108    435     18
+   2370  1014   261181.1547     8   261461.0600   260794.8600    16066    0.25%     supplier-36 D   2370    637     21
+   3382   651        cutoff         261461.0600   261171.6808    23365    0.11%     supplier-11 D   3382   3380     19
+Elapsed time = 6.69 sec. (3150.88 ticks, tree = 0.31 MB, solutions = 5)
+
+User cuts applied:  2000
+
+Root node processing (before b&c):
+  Real time             =    1.47 sec. (41.97 ticks)
+Sequential b&c:
+  Real time             =    5.47 sec. (3787.74 ticks)
+                          ------------
+Total (root+branch&cut) =    6.94 sec. (3829.71 ticks)
+
+
+Results statistics:
+	(a) Optimal objective value:				261461
+	(b) Relaxed objective value:				261461
+	(c) Number of branch-and-bound nodes:			4173
+	(d) CPX solving time:					6.92393
+	(e) Total time:						7.92304
+	(f) Number of Benders cuts for binary solution:		1710
+	(g) Number of Benders cuts for fractional solution:	290
+
+Finish.
+
+
+Input parameters information:
+Solving setting:				Heur-1 (Random repair)
+Number of Customers:				1000
+Number of Suppliers:				100
+Budget (Cardinality restriction):		0
+Disaster Type:			1
+Quality of Service:				10
+Time limitation:				300
+Number of samplings:				100
+Random seed of graph generating:		1
+
+
+Generate graph start......
+Generate graph end. (time: 0.002382 s)
+
+CPX Solving Time Limit: 300
+Version identifier: 20.1.0.0 | 2020-11-10 | 9bedb6d68
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               300
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+Found incumbent of value 1499960.760000 after 0.02 sec. (33.51 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 103046 rows and 367382 columns.
+MIP Presolve modified 614 coefficients.
+Reduced MIP has 6955 rows, 23667 columns, and 40537 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.32 sec. (239.03 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 2792 rows and 8640 columns.
+Reduced MIP has 4163 rows, 15027 columns, and 26019 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (11.80 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 4075 rows and 14711 columns.
+Reduced MIP has 88 rows, 316 columns, and 546 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (5.53 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+Reduced MIP has 88 rows, 316 columns, and 546 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.24 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.00 sec. (0.14 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                       755034.5000   753248.0000             0.24%
+*     0     0      integral     0   753248.0000   753248.0000       22    0.00%
+Elapsed time = 0.43 sec. (578.48 ticks, tree = 0.00 MB, solutions = 2)
+
+Root node processing (before b&c):
+  Real time             =    0.44 sec. (596.01 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =    0.44 sec. (596.01 ticks)
+
+
+Results statistics:
+	(a) Optimal objective value:				753248
+	(b) Relaxed objective value:				753248
+	(c) Number of branch-and-bound nodes:			0
+	(d) CPX solving time:					0.439015
+	(e) Total time:						0.439015
+	(f) Number of Benders cuts for binary solution:		0
+	(g) Number of Benders cuts for fractional solution:	0
+
+Finish.
+
+
+Input parameters information:
+Solving setting:				Heur-1 (Random repair)
+Number of Customers:				1000
+Number of Suppliers:				100
+Budget (Cardinality restriction):		5
+Disaster Type:			1
+Quality of Service:				10
+Time limitation:				300
+Number of samplings:				100
+Random seed of graph generating:		1
+
+
+Generate graph start......
+Generate graph end. (time: 0.002376 s)
+
+CPX Solving Time Limit: 300
+Version identifier: 20.1.0.0 | 2020-11-10 | 9bedb6d68
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               300
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+Found incumbent of value 1499960.760000 after 0.02 sec. (33.51 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 103439 rows and 368651 columns.
+MIP Presolve modified 496 coefficients.
+Reduced MIP has 6562 rows, 22398 columns, and 38386 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.29 sec. (240.00 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 2825 rows and 8777 columns.
+Reduced MIP has 3737 rows, 13621 columns, and 23625 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (11.04 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 3656 rows and 13327 columns.
+Reduced MIP has 81 rows, 294 columns, and 509 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (5.01 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 1 rows and 3 columns.
+Reduced MIP has 80 rows, 291 columns, and 504 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.25 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.00 sec. (0.18 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                      1499960.7600   679795.9400            54.68%
+*     0     0      integral     0   679795.9400   679795.9400       33    0.00%
+Elapsed time = 0.38 sec. (540.02 ticks, tree = 0.00 MB, solutions = 1)
+
+Root node processing (before b&c):
+  Real time             =    0.39 sec. (554.93 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =    0.39 sec. (554.93 ticks)
+
+
+Results statistics:
+	(a) Optimal objective value:				679796
+	(b) Relaxed objective value:				679796
+	(c) Number of branch-and-bound nodes:			0
+	(d) CPX solving time:					0.389802
+	(e) Total time:						0.389802
+	(f) Number of Benders cuts for binary solution:		0
+	(g) Number of Benders cuts for fractional solution:	0
+
+Finish.
+
+
+Input parameters information:
+Solving setting:				Heur-1 (Random repair)
+Number of Customers:				1000
+Number of Suppliers:				100
+Budget (Cardinality restriction):		10
+Disaster Type:			1
+Quality of Service:				10
+Time limitation:				300
+Number of samplings:				100
+Random seed of graph generating:		1
+
+
+Generate graph start......
+Generate graph end. (time: 0.002341 s)
+
+CPX Solving Time Limit: 300
+Version identifier: 20.1.0.0 | 2020-11-10 | 9bedb6d68
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               300
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+Found incumbent of value 1499960.760000 after 0.02 sec. (33.51 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 102225 rows and 365092 columns.
+MIP Presolve modified 475 coefficients.
+Reduced MIP has 7776 rows, 25957 columns, and 44300 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.32 sec. (266.12 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 2658 rows and 7589 columns.
+Reduced MIP has 5118 rows, 18368 columns, and 31773 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (13.35 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 5024 rows and 18033 columns.
+Reduced MIP has 94 rows, 335 columns, and 578 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (6.75 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+Reduced MIP has 94 rows, 335 columns, and 578 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.26 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.00 sec. (0.15 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                      1499960.7600   603033.7600            59.80%
+*     0     0      integral     0   603076.8500   603076.8500       22    0.00%
+Elapsed time = 0.43 sec. (609.74 ticks, tree = 0.00 MB, solutions = 1)
+
+Root node processing (before b&c):
+  Real time             =    0.44 sec. (624.66 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =    0.44 sec. (624.66 ticks)
+
+
+Results statistics:
+	(a) Optimal objective value:				603077
+	(b) Relaxed objective value:				603077
+	(c) Number of branch-and-bound nodes:			0
+	(d) CPX solving time:					0.438391
+	(e) Total time:						0.438391
+	(f) Number of Benders cuts for binary solution:		0
+	(g) Number of Benders cuts for fractional solution:	0
+
+Finish.
+
+
+Input parameters information:
+Solving setting:				Heur-1 (Random repair)
+Number of Customers:				1000
+Number of Suppliers:				100
+Budget (Cardinality restriction):		20
+Disaster Type:			1
+Quality of Service:				10
+Time limitation:				300
+Number of samplings:				100
+Random seed of graph generating:		1
+
+
+Generate graph start......
+Generate graph end. (time: 0.002382 s)
+
+CPX Solving Time Limit: 300
+Version identifier: 20.1.0.0 | 2020-11-10 | 9bedb6d68
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               300
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+Found incumbent of value 1499960.760000 after 0.02 sec. (33.51 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 97037 rows and 348488 columns.
+MIP Presolve modified 383 coefficients.
+Reduced MIP has 12964 rows, 42561 columns, and 72383 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.33 sec. (253.36 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 2040 rows and 5680 columns.
+Reduced MIP has 10924 rows, 36881 columns, and 63059 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.02 sec. (23.37 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 4253 rows and 13792 columns.
+Reduced MIP has 6671 rows, 23089 columns, and 39670 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (18.36 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 6568 rows and 22693 columns.
+Reduced MIP has 103 rows, 396 columns, and 692 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (8.53 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+Reduced MIP has 103 rows, 396 columns, and 692 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.30 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.00 sec. (0.28 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                      1499960.7600   462374.7000            69.17%
+*     0     0      integral     0   462582.3800   462582.3800       45    0.00%
+Elapsed time = 0.50 sec. (768.87 ticks, tree = 0.00 MB, solutions = 1)
+
+Root node processing (before b&c):
+  Real time             =    0.51 sec. (783.79 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =    0.51 sec. (783.79 ticks)
+
+
+Results statistics:
+	(a) Optimal objective value:				462582
+	(b) Relaxed objective value:				462582
+	(c) Number of branch-and-bound nodes:			0
+	(d) CPX solving time:					0.506242
+	(e) Total time:						0.506242
+	(f) Number of Benders cuts for binary solution:		0
+	(g) Number of Benders cuts for fractional solution:	0
+
+Finish.
+
+
+Input parameters information:
+Solving setting:				Heur-1 (Random repair)
+Number of Customers:				1000
+Number of Suppliers:				100
+Budget (Cardinality restriction):		30
+Disaster Type:			1
+Quality of Service:				10
+Time limitation:				300
+Number of samplings:				100
+Random seed of graph generating:		1
+
+
+Generate graph start......
+Generate graph end. (time: 0.002527 s)
+
+CPX Solving Time Limit: 300
+Version identifier: 20.1.0.0 | 2020-11-10 | 9bedb6d68
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               300
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+Found incumbent of value 1499960.760000 after 0.02 sec. (33.51 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 96797 rows and 349057 columns.
+MIP Presolve modified 336 coefficients.
+Reduced MIP has 13204 rows, 41992 columns, and 70985 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.36 sec. (274.98 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 2311 rows and 6634 columns.
+Reduced MIP has 10893 rows, 35358 columns, and 60017 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.02 sec. (22.88 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 5188 rows and 16820 columns.
+Reduced MIP has 5705 rows, 18538 columns, and 31475 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (16.90 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 5001 rows and 16139 columns.
+Reduced MIP has 704 rows, 2399 columns, and 4114 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (7.33 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 1 rows and 4 columns.
+Reduced MIP has 703 rows, 2395 columns, and 4107 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (2.03 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.00 sec. (1.97 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                      1499960.7600   353400.1800            76.44%
+*     0     0      integral     0   353702.4900   353702.4900      161    0.00%
+Elapsed time = 0.52 sec. (748.07 ticks, tree = 0.00 MB, solutions = 1)
+
+Root node processing (before b&c):
+  Real time             =    0.53 sec. (763.00 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =    0.53 sec. (763.00 ticks)
+
+
+Results statistics:
+	(a) Optimal objective value:				353702
+	(b) Relaxed objective value:				353702
+	(c) Number of branch-and-bound nodes:			0
+	(d) CPX solving time:					0.528846
+	(e) Total time:						0.528846
+	(f) Number of Benders cuts for binary solution:		0
+	(g) Number of Benders cuts for fractional solution:	0
+
+Finish.
+
+
+Input parameters information:
+Solving setting:				Heur-1 (Random repair)
+Number of Customers:				1000
+Number of Suppliers:				100
+Budget (Cardinality restriction):		40
+Disaster Type:			1
+Quality of Service:				10
+Time limitation:				300
+Number of samplings:				100
+Random seed of graph generating:		1
+
+
+Generate graph start......
+Generate graph end. (time: 0.002493 s)
+
+CPX Solving Time Limit: 300
+Version identifier: 20.1.0.0 | 2020-11-10 | 9bedb6d68
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               300
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+Found incumbent of value 1499960.760000 after 0.02 sec. (33.52 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 96118 rows and 342883 columns.
+MIP Presolve modified 68 coefficients.
+Reduced MIP has 13883 rows, 48166 columns, and 82862 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.32 sec. (253.73 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 2166 rows and 6098 columns.
+Reduced MIP has 11717 rows, 42068 columns, and 72827 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.02 sec. (26.36 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 5783 rows and 20401 columns.
+Reduced MIP has 5934 rows, 21667 columns, and 37632 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (19.83 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 5 rows and 21 columns.
+Reduced MIP has 5929 rows, 21646 columns, and 37595 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (18.85 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.01 sec. (33.27 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                      1499960.7600   308997.2200            79.40%
+*     0     0      integral     0   313267.3900   313267.3900     1446    0.00%
+Elapsed time = 0.49 sec. (702.90 ticks, tree = 0.00 MB, solutions = 1)
+
+Root node processing (before b&c):
+  Real time             =    0.50 sec. (717.89 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =    0.50 sec. (717.89 ticks)
+
+
+Results statistics:
+	(a) Optimal objective value:				313267
+	(b) Relaxed objective value:				313267
+	(c) Number of branch-and-bound nodes:			0
+	(d) CPX solving time:					0.500103
+	(e) Total time:						0.500103
+	(f) Number of Benders cuts for binary solution:		0
+	(g) Number of Benders cuts for fractional solution:	0
+
+Finish.
+
+
+Input parameters information:
+Solving setting:				Heur-2 (Capacity-based repair)
+Number of Customers:				1000
+Number of Suppliers:				100
+Budget (Cardinality restriction):		0
+Disaster Type:			1
+Quality of Service:				10
+Time limitation:				300
+Number of samplings:				100
+Random seed of graph generating:		1
+
+
+Generate graph start......
+Generate graph end. (time: 0.002575 s)
+
+CPX Solving Time Limit: 300
+Version identifier: 20.1.0.0 | 2020-11-10 | 9bedb6d68
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               300
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+Found incumbent of value 1499960.760000 after 0.02 sec. (33.51 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 103046 rows and 367382 columns.
+MIP Presolve modified 614 coefficients.
+Reduced MIP has 6955 rows, 23667 columns, and 40537 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.28 sec. (239.03 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 2792 rows and 8640 columns.
+Reduced MIP has 4163 rows, 15027 columns, and 26019 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (11.80 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 4075 rows and 14711 columns.
+Reduced MIP has 88 rows, 316 columns, and 546 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (5.53 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+Reduced MIP has 88 rows, 316 columns, and 546 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.24 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.00 sec. (0.14 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                       755034.5000   753248.0000             0.24%
+*     0     0      integral     0   753248.0000   753248.0000       22    0.00%
+Elapsed time = 0.39 sec. (578.48 ticks, tree = 0.00 MB, solutions = 2)
+
+Root node processing (before b&c):
+  Real time             =    0.40 sec. (596.01 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =    0.40 sec. (596.01 ticks)
+
+
+Results statistics:
+	(a) Optimal objective value:				753248
+	(b) Relaxed objective value:				753248
+	(c) Number of branch-and-bound nodes:			0
+	(d) CPX solving time:					0.399363
+	(e) Total time:						0.399363
+	(f) Number of Benders cuts for binary solution:		0
+	(g) Number of Benders cuts for fractional solution:	0
+
+Finish.
+
+
+Input parameters information:
+Solving setting:				Heur-2 (Capacity-based repair)
+Number of Customers:				1000
+Number of Suppliers:				100
+Budget (Cardinality restriction):		5
+Disaster Type:			1
+Quality of Service:				10
+Time limitation:				300
+Number of samplings:				100
+Random seed of graph generating:		1
+
+
+Generate graph start......
+Generate graph end. (time: 0.00245 s)
+
+CPX Solving Time Limit: 300
+Version identifier: 20.1.0.0 | 2020-11-10 | 9bedb6d68
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               300
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+Found incumbent of value 1499960.760000 after 0.02 sec. (33.51 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 103746 rows and 370069 columns.
+MIP Presolve modified 422 coefficients.
+Reduced MIP has 6255 rows, 20980 columns, and 35844 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.28 sec. (238.83 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 2864 rows and 8688 columns.
+Reduced MIP has 3391 rows, 12292 columns, and 21304 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (10.26 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 3303 rows and 11976 columns.
+Reduced MIP has 88 rows, 316 columns, and 546 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (4.53 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+Reduced MIP has 88 rows, 316 columns, and 546 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.24 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.00 sec. (0.16 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                       644100.1700   642313.6700             0.28%
+*     0     0      integral     0   642313.6700   642313.6700       21    0.00%
+Elapsed time = 0.39 sec. (555.95 ticks, tree = 0.00 MB, solutions = 2)
+
+Root node processing (before b&c):
+  Real time             =    0.40 sec. (573.48 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =    0.40 sec. (573.48 ticks)
+
+
+Results statistics:
+	(a) Optimal objective value:				642314
+	(b) Relaxed objective value:				642314
+	(c) Number of branch-and-bound nodes:			0
+	(d) CPX solving time:					0.401666
+	(e) Total time:						0.401666
+	(f) Number of Benders cuts for binary solution:		0
+	(g) Number of Benders cuts for fractional solution:	0
+
+Finish.
+
+
+Input parameters information:
+Solving setting:				Heur-2 (Capacity-based repair)
+Number of Customers:				1000
+Number of Suppliers:				100
+Budget (Cardinality restriction):		10
+Disaster Type:			1
+Quality of Service:				10
+Time limitation:				300
+Number of samplings:				100
+Random seed of graph generating:		1
+
+
+Generate graph start......
+Generate graph end. (time: 0.002344 s)
+
+CPX Solving Time Limit: 300
+Version identifier: 20.1.0.0 | 2020-11-10 | 9bedb6d68
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               300
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+Found incumbent of value 1499960.760000 after 0.02 sec. (33.51 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 103217 rows and 369030 columns.
+MIP Presolve modified 201 coefficients.
+Reduced MIP has 6784 rows, 22019 columns, and 37366 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.28 sec. (223.59 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 2227 rows and 6276 columns.
+Reduced MIP has 4557 rows, 15743 columns, and 27038 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (11.41 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 4476 rows and 15449 columns.
+Reduced MIP has 81 rows, 294 columns, and 509 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (5.82 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 1 rows and 3 columns.
+Reduced MIP has 80 rows, 291 columns, and 504 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.25 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.00 sec. (0.19 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                      1499960.7600   577552.6600            61.50%
+*     0     0      integral     0   577552.6600   577552.6600       34    0.00%
+Elapsed time = 0.38 sec. (555.90 ticks, tree = 0.00 MB, solutions = 1)
+
+Root node processing (before b&c):
+  Real time             =    0.39 sec. (570.82 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =    0.39 sec. (570.82 ticks)
+
+
+Results statistics:
+	(a) Optimal objective value:				577553
+	(b) Relaxed objective value:				577553
+	(c) Number of branch-and-bound nodes:			0
+	(d) CPX solving time:					0.388374
+	(e) Total time:						0.388374
+	(f) Number of Benders cuts for binary solution:		0
+	(g) Number of Benders cuts for fractional solution:	0
+
+Finish.
+
+
+Input parameters information:
+Solving setting:				Heur-2 (Capacity-based repair)
+Number of Customers:				1000
+Number of Suppliers:				100
+Budget (Cardinality restriction):		20
+Disaster Type:			1
+Quality of Service:				10
+Time limitation:				300
+Number of samplings:				100
+Random seed of graph generating:		1
+
+
+Generate graph start......
+Generate graph end. (time: 0.002374 s)
+
+CPX Solving Time Limit: 300
+Version identifier: 20.1.0.0 | 2020-11-10 | 9bedb6d68
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               300
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+Found incumbent of value 1499960.760000 after 0.02 sec. (33.51 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 103282 rows and 368686 columns.
+MIP Presolve modified 8 coefficients.
+Reduced MIP has 6719 rows, 22363 columns, and 38123 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.29 sec. (240.85 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 2232 rows and 6277 columns.
+Reduced MIP has 4487 rows, 16086 columns, and 27798 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (11.58 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 4401 rows and 15764 columns.
+Reduced MIP has 86 rows, 322 columns, and 561 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (5.92 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 1 rows and 3 columns.
+Reduced MIP has 85 rows, 319 columns, and 556 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.27 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.00 sec. (0.19 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                      1499960.7600   457784.0900            69.48%
+*     0     0      integral     0   457784.0900   457784.0900       34    0.00%
+Elapsed time = 0.39 sec. (576.68 ticks, tree = 0.00 MB, solutions = 1)
+
+Root node processing (before b&c):
+  Real time             =    0.39 sec. (591.60 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =    0.39 sec. (591.60 ticks)
+
+
+Results statistics:
+	(a) Optimal objective value:				457784
+	(b) Relaxed objective value:				457784
+	(c) Number of branch-and-bound nodes:			0
+	(d) CPX solving time:					0.392631
+	(e) Total time:						0.392631
+	(f) Number of Benders cuts for binary solution:		0
+	(g) Number of Benders cuts for fractional solution:	0
+
+Finish.
+
+
+Input parameters information:
+Solving setting:				Heur-2 (Capacity-based repair)
+Number of Customers:				1000
+Number of Suppliers:				100
+Budget (Cardinality restriction):		30
+Disaster Type:			1
+Quality of Service:				10
+Time limitation:				300
+Number of samplings:				100
+Random seed of graph generating:		1
+
+
+Generate graph start......
+Generate graph end. (time: 0.002437 s)
+
+CPX Solving Time Limit: 300
+Version identifier: 20.1.0.0 | 2020-11-10 | 9bedb6d68
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               300
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+Found incumbent of value 1499960.760000 after 0.02 sec. (33.51 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 99731 rows and 357376 columns.
+Reduced MIP has 10270 rows, 33673 columns, and 57226 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.32 sec. (250.31 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 2248 rows and 6408 columns.
+Reduced MIP has 8022 rows, 27265 columns, and 46652 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (18.08 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 4920 rows and 16537 columns.
+Reduced MIP has 3102 rows, 10728 columns, and 18408 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (12.22 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 2952 rows and 10230 columns.
+Reduced MIP has 150 rows, 498 columns, and 848 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (4.02 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+Reduced MIP has 150 rows, 498 columns, and 848 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.39 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.00 sec. (0.20 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                      1499960.7600   332313.4500            77.85%
+*     0     0      integral     0   332313.4500   332313.4500       24    0.00%
+Elapsed time = 0.46 sec. (669.97 ticks, tree = 0.00 MB, solutions = 1)
+
+Root node processing (before b&c):
+  Real time             =    0.47 sec. (684.89 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =    0.47 sec. (684.89 ticks)
+
+
+Results statistics:
+	(a) Optimal objective value:				332313
+	(b) Relaxed objective value:				332313
+	(c) Number of branch-and-bound nodes:			0
+	(d) CPX solving time:					0.468252
+	(e) Total time:						0.468252
+	(f) Number of Benders cuts for binary solution:		0
+	(g) Number of Benders cuts for fractional solution:	0
+
+Finish.
+
+
+Input parameters information:
+Solving setting:				Heur-2 (Capacity-based repair)
+Number of Customers:				1000
+Number of Suppliers:				100
+Budget (Cardinality restriction):		40
+Disaster Type:			1
+Quality of Service:				10
+Time limitation:				300
+Number of samplings:				100
+Random seed of graph generating:		1
+
+
+Generate graph start......
+Generate graph end. (time: 0.003652 s)
+
+CPX Solving Time Limit: 300
+Version identifier: 20.1.0.0 | 2020-11-10 | 9bedb6d68
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               300
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+Found incumbent of value 1499960.760000 after 0.02 sec. (33.52 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 98916 rows and 352931 columns.
+Reduced MIP has 11085 rows, 38118 columns, and 65440 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.32 sec. (252.02 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 2542 rows and 7517 columns.
+Reduced MIP has 8543 rows, 30601 columns, and 52926 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (20.32 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 5451 rows and 18794 columns.
+Reduced MIP has 3092 rows, 11807 columns, and 20661 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (13.59 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 3 rows and 13 columns.
+Reduced MIP has 3089 rows, 11794 columns, and 20638 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (10.15 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.00 sec. (7.95 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                      1499960.7600   288283.1500            80.78%
+*     0     0      integral     0   288283.1500   288283.1500      302    0.00%
+Elapsed time = 0.46 sec. (624.78 ticks, tree = 0.00 MB, solutions = 1)
+
+Root node processing (before b&c):
+  Real time             =    0.47 sec. (639.73 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =    0.47 sec. (639.73 ticks)
+
+
+Results statistics:
+	(a) Optimal objective value:				288283
+	(b) Relaxed objective value:				288283
+	(c) Number of branch-and-bound nodes:			0
+	(d) CPX solving time:					0.469392
+	(e) Total time:						0.469392
+	(f) Number of Benders cuts for binary solution:		0
+	(g) Number of Benders cuts for fractional solution:	0
+
+Finish.
+
+
+Input parameters information:
+Solving setting:				Heur-3 (Degree-based repair)
+Number of Customers:				1000
+Number of Suppliers:				100
+Budget (Cardinality restriction):		0
+Disaster Type:			1
+Quality of Service:				10
+Time limitation:				300
+Number of samplings:				100
+Random seed of graph generating:		1
+
+
+Generate graph start......
+Generate graph end. (time: 0.002385 s)
+
+CPX Solving Time Limit: 300
+Version identifier: 20.1.0.0 | 2020-11-10 | 9bedb6d68
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               300
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+Found incumbent of value 1499960.760000 after 0.02 sec. (33.51 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 103046 rows and 367382 columns.
+MIP Presolve modified 614 coefficients.
+Reduced MIP has 6955 rows, 23667 columns, and 40537 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.29 sec. (239.03 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 2792 rows and 8640 columns.
+Reduced MIP has 4163 rows, 15027 columns, and 26019 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (11.80 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 4075 rows and 14711 columns.
+Reduced MIP has 88 rows, 316 columns, and 546 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (5.53 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+Reduced MIP has 88 rows, 316 columns, and 546 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.24 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.00 sec. (0.14 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                       755034.5000   753248.0000             0.24%
+*     0     0      integral     0   753248.0000   753248.0000       22    0.00%
+Elapsed time = 0.40 sec. (578.48 ticks, tree = 0.00 MB, solutions = 2)
+
+Root node processing (before b&c):
+  Real time             =    0.41 sec. (596.01 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =    0.41 sec. (596.01 ticks)
+
+
+Results statistics:
+	(a) Optimal objective value:				753248
+	(b) Relaxed objective value:				753248
+	(c) Number of branch-and-bound nodes:			0
+	(d) CPX solving time:					0.405521
+	(e) Total time:						0.405521
+	(f) Number of Benders cuts for binary solution:		0
+	(g) Number of Benders cuts for fractional solution:	0
+
+Finish.
+
+
+Input parameters information:
+Solving setting:				Heur-3 (Degree-based repair)
+Number of Customers:				1000
+Number of Suppliers:				100
+Budget (Cardinality restriction):		5
+Disaster Type:			1
+Quality of Service:				10
+Time limitation:				300
+Number of samplings:				100
+Random seed of graph generating:		1
+
+
+Generate graph start......
+Generate graph end. (time: 0.002369 s)
+
+CPX Solving Time Limit: 300
+Version identifier: 20.1.0.0 | 2020-11-10 | 9bedb6d68
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               300
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+Found incumbent of value 1499960.760000 after 0.02 sec. (33.51 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 101694 rows and 362548 columns.
+MIP Presolve modified 614 coefficients.
+Reduced MIP has 8307 rows, 28501 columns, and 48858 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.31 sec. (247.32 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 2482 rows and 7451 columns.
+Reduced MIP has 5825 rows, 21050 columns, and 36424 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (14.83 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 7 rows and 29 columns.
+Reduced MIP has 5818 rows, 21021 columns, and 36373 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (18.37 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.01 sec. (35.26 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                      1499960.7600   673850.3300            55.08%
+*     0     0      integral     0   676940.9800   676940.9800     1490    0.00%
+Elapsed time = 0.41 sec. (519.60 ticks, tree = 0.00 MB, solutions = 1)
+
+Root node processing (before b&c):
+  Real time             =    0.42 sec. (534.58 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =    0.42 sec. (534.58 ticks)
+
+
+Results statistics:
+	(a) Optimal objective value:				676941
+	(b) Relaxed objective value:				676941
+	(c) Number of branch-and-bound nodes:			0
+	(d) CPX solving time:					0.420245
+	(e) Total time:						0.420245
+	(f) Number of Benders cuts for binary solution:		0
+	(g) Number of Benders cuts for fractional solution:	0
+
+Finish.
+
+
+Input parameters information:
+Solving setting:				Heur-3 (Degree-based repair)
+Number of Customers:				1000
+Number of Suppliers:				100
+Budget (Cardinality restriction):		10
+Disaster Type:			1
+Quality of Service:				10
+Time limitation:				300
+Number of samplings:				100
+Random seed of graph generating:		1
+
+
+Generate graph start......
+Generate graph end. (time: 0.002495 s)
+
+CPX Solving Time Limit: 300
+Version identifier: 20.1.0.0 | 2020-11-10 | 9bedb6d68
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               300
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+Found incumbent of value 1499960.760000 after 0.02 sec. (33.51 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 98524 rows and 352706 columns.
+MIP Presolve modified 614 coefficients.
+Reduced MIP has 11477 rows, 38343 columns, and 65372 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.38 sec. (292.59 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 2733 rows and 8183 columns.
+Reduced MIP has 8744 rows, 30160 columns, and 51726 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (20.38 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 5884 rows and 20862 columns.
+Reduced MIP has 2860 rows, 9298 columns, and 15755 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (12.98 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 2720 rows and 8846 columns.
+Reduced MIP has 140 rows, 452 columns, and 764 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (3.52 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 1 rows and 4 columns.
+Reduced MIP has 139 rows, 448 columns, and 757 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.38 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.00 sec. (0.30 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                      1499960.7600   583455.5900            61.10%
+*     0     0      integral     0   583522.0100   583522.0100       39    0.00%
+Elapsed time = 0.52 sec. (723.81 ticks, tree = 0.00 MB, solutions = 1)
+
+Root node processing (before b&c):
+  Real time             =    0.53 sec. (738.73 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =    0.53 sec. (738.73 ticks)
+
+
+Results statistics:
+	(a) Optimal objective value:				583522
+	(b) Relaxed objective value:				583522
+	(c) Number of branch-and-bound nodes:			0
+	(d) CPX solving time:					0.525858
+	(e) Total time:						0.525858
+	(f) Number of Benders cuts for binary solution:		0
+	(g) Number of Benders cuts for fractional solution:	0
+
+Finish.
+
+
+Input parameters information:
+Solving setting:				Heur-3 (Degree-based repair)
+Number of Customers:				1000
+Number of Suppliers:				100
+Budget (Cardinality restriction):		20
+Disaster Type:			1
+Quality of Service:				10
+Time limitation:				300
+Number of samplings:				100
+Random seed of graph generating:		1
+
+
+Generate graph start......
+Generate graph end. (time: 0.002607 s)
+
+CPX Solving Time Limit: 300
+Version identifier: 20.1.0.0 | 2020-11-10 | 9bedb6d68
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               300
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+Found incumbent of value 1499960.760000 after 0.02 sec. (33.51 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 94825 rows and 338187 columns.
+MIP Presolve modified 504 coefficients.
+Reduced MIP has 15176 rows, 52862 columns, and 90927 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.38 sec. (297.83 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 3131 rows and 10051 columns.
+Reduced MIP has 12045 rows, 42811 columns, and 73911 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.02 sec. (28.24 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 7209 rows and 25935 columns.
+Reduced MIP has 4836 rows, 16876 columns, and 29040 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (19.13 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 5 rows and 18 columns.
+Reduced MIP has 4831 rows, 16858 columns, and 29009 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (14.70 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.01 sec. (27.99 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                      1499960.7600   427304.8900            71.51%
+*     0     0      integral     0   432615.9000   432615.9000     1362    0.00%
+Elapsed time = 0.56 sec. (745.78 ticks, tree = 0.00 MB, solutions = 1)
+
+Root node processing (before b&c):
+  Real time             =    0.57 sec. (760.75 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =    0.57 sec. (760.75 ticks)
+
+
+Results statistics:
+	(a) Optimal objective value:				432616
+	(b) Relaxed objective value:				432616
+	(c) Number of branch-and-bound nodes:			0
+	(d) CPX solving time:					0.566487
+	(e) Total time:						0.566487
+	(f) Number of Benders cuts for binary solution:		0
+	(g) Number of Benders cuts for fractional solution:	0
+
+Finish.
+
+
+Input parameters information:
+Solving setting:				Heur-3 (Degree-based repair)
+Number of Customers:				1000
+Number of Suppliers:				100
+Budget (Cardinality restriction):		30
+Disaster Type:			1
+Quality of Service:				10
+Time limitation:				300
+Number of samplings:				100
+Random seed of graph generating:		1
+
+
+Generate graph start......
+Generate graph end. (time: 0.002338 s)
+
+CPX Solving Time Limit: 300
+Version identifier: 20.1.0.0 | 2020-11-10 | 9bedb6d68
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               300
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+Found incumbent of value 1499960.760000 after 0.02 sec. (33.51 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 92504 rows and 331553 columns.
+MIP Presolve modified 428 coefficients.
+Reduced MIP has 17497 rows, 59496 columns, and 101958 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.39 sec. (280.85 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 2364 rows and 6889 columns.
+Reduced MIP has 15133 rows, 52607 columns, and 90527 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.02 sec. (32.74 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 7847 rows and 27202 columns.
+Reduced MIP has 7286 rows, 25405 columns, and 43773 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.02 sec. (24.51 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 882 rows and 2822 columns.
+Reduced MIP has 6404 rows, 22583 columns, and 38993 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.02 sec. (21.13 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.01 sec. (33.32 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                      1499960.7600   325006.0000            78.33%
+*     0     0      integral     0   329507.2900   329507.2900     1308    0.00%
+Elapsed time = 0.59 sec. (763.62 ticks, tree = 0.00 MB, solutions = 1)
+
+Root node processing (before b&c):
+  Real time             =    0.60 sec. (778.61 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =    0.60 sec. (778.61 ticks)
+
+
+Results statistics:
+	(a) Optimal objective value:				329507
+	(b) Relaxed objective value:				329507
+	(c) Number of branch-and-bound nodes:			0
+	(d) CPX solving time:					0.595426
+	(e) Total time:						0.595426
+	(f) Number of Benders cuts for binary solution:		0
+	(g) Number of Benders cuts for fractional solution:	0
+
+Finish.
+
+
+Input parameters information:
+Solving setting:				Heur-3 (Degree-based repair)
+Number of Customers:				1000
+Number of Suppliers:				100
+Budget (Cardinality restriction):		40
+Disaster Type:			1
+Quality of Service:				10
+Time limitation:				300
+Number of samplings:				100
+Random seed of graph generating:		1
+
+
+Generate graph start......
+Generate graph end. (time: 0.002423 s)
+
+CPX Solving Time Limit: 300
+Version identifier: 20.1.0.0 | 2020-11-10 | 9bedb6d68
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               300
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+Found incumbent of value 1499960.760000 after 0.02 sec. (33.52 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 91067 rows and 324433 columns.
+MIP Presolve modified 387 coefficients.
+Reduced MIP has 18934 rows, 66616 columns, and 114863 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.35 sec. (262.69 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 2272 rows and 6629 columns.
+Reduced MIP has 16662 rows, 59987 columns, and 103864 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.05 sec. (56.99 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.05 sec. (114.09 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                      1499960.7600   269788.8500            82.01%
+*     0     0      integral     0   276395.4900   276395.4900     2723    0.00%
+Elapsed time = 0.53 sec. (643.63 ticks, tree = 0.00 MB, solutions = 1)
+
+Root node processing (before b&c):
+  Real time             =    0.54 sec. (658.75 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =    0.54 sec. (658.75 ticks)
+
+
+Results statistics:
+	(a) Optimal objective value:				276395
+	(b) Relaxed objective value:				276395
+	(c) Number of branch-and-bound nodes:			0
+	(d) CPX solving time:					0.533373
+	(e) Total time:						0.533373
+	(f) Number of Benders cuts for binary solution:		0
+	(g) Number of Benders cuts for fractional solution:	0
+
+Finish.
+
+
+Input parameters information:
+Solving setting:				Heur-4 (Risk-based repair)
+Number of Customers:				1000
+Number of Suppliers:				100
+Budget (Cardinality restriction):		0
+Disaster Type:			1
+Quality of Service:				10
+Time limitation:				300
+Number of samplings:				100
+Random seed of graph generating:		1
+
+
+Generate graph start......
+Generate graph end. (time: 0.002501 s)
+
+CPX Solving Time Limit: 300
+Version identifier: 20.1.0.0 | 2020-11-10 | 9bedb6d68
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               300
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+Found incumbent of value 1499960.760000 after 0.02 sec. (33.51 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 103046 rows and 367382 columns.
+MIP Presolve modified 614 coefficients.
+Reduced MIP has 6955 rows, 23667 columns, and 40537 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.29 sec. (239.03 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 2792 rows and 8640 columns.
+Reduced MIP has 4163 rows, 15027 columns, and 26019 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (11.80 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 4075 rows and 14711 columns.
+Reduced MIP has 88 rows, 316 columns, and 546 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (5.53 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+Reduced MIP has 88 rows, 316 columns, and 546 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.24 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.00 sec. (0.14 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                       755034.5000   753248.0000             0.24%
+*     0     0      integral     0   753248.0000   753248.0000       22    0.00%
+Elapsed time = 0.41 sec. (578.48 ticks, tree = 0.00 MB, solutions = 2)
+
+Root node processing (before b&c):
+  Real time             =    0.42 sec. (596.01 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =    0.42 sec. (596.01 ticks)
+
+
+Results statistics:
+	(a) Optimal objective value:				753248
+	(b) Relaxed objective value:				753248
+	(c) Number of branch-and-bound nodes:			0
+	(d) CPX solving time:					0.416307
+	(e) Total time:						0.416307
+	(f) Number of Benders cuts for binary solution:		0
+	(g) Number of Benders cuts for fractional solution:	0
+
+Finish.
+
+
+Input parameters information:
+Solving setting:				Heur-4 (Risk-based repair)
+Number of Customers:				1000
+Number of Suppliers:				100
+Budget (Cardinality restriction):		5
+Disaster Type:			1
+Quality of Service:				10
+Time limitation:				300
+Number of samplings:				100
+Random seed of graph generating:		1
+
+
+Generate graph start......
+Generate graph end. (time: 0.002458 s)
+
+CPX Solving Time Limit: 300
+Version identifier: 20.1.0.0 | 2020-11-10 | 9bedb6d68
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               300
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+Found incumbent of value 1499960.760000 after 0.02 sec. (33.51 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 103302 rows and 368023 columns.
+MIP Presolve modified 525 coefficients.
+Reduced MIP has 6699 rows, 23026 columns, and 39505 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.29 sec. (240.79 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 2981 rows and 9232 columns.
+Reduced MIP has 3718 rows, 13794 columns, and 23988 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (11.30 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 3637 rows and 13500 columns.
+Reduced MIP has 81 rows, 294 columns, and 509 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (5.06 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 1 rows and 3 columns.
+Reduced MIP has 80 rows, 291 columns, and 504 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.25 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.00 sec. (0.18 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                      1499960.7600   674735.8300            55.02%
+*     0     0      integral     0   674735.8300   674735.8300       33    0.00%
+Elapsed time = 0.39 sec. (540.06 ticks, tree = 0.00 MB, solutions = 1)
+
+Root node processing (before b&c):
+  Real time             =    0.40 sec. (554.98 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =    0.40 sec. (554.98 ticks)
+
+
+Results statistics:
+	(a) Optimal objective value:				674736
+	(b) Relaxed objective value:				674736
+	(c) Number of branch-and-bound nodes:			0
+	(d) CPX solving time:					0.39875
+	(e) Total time:						0.39875
+	(f) Number of Benders cuts for binary solution:		0
+	(g) Number of Benders cuts for fractional solution:	0
+
+Finish.
+
+
+Input parameters information:
+Solving setting:				Heur-4 (Risk-based repair)
+Number of Customers:				1000
+Number of Suppliers:				100
+Budget (Cardinality restriction):		10
+Disaster Type:			1
+Quality of Service:				10
+Time limitation:				300
+Number of samplings:				100
+Random seed of graph generating:		1
+
+
+Generate graph start......
+Generate graph end. (time: 0.002545 s)
+
+CPX Solving Time Limit: 300
+Version identifier: 20.1.0.0 | 2020-11-10 | 9bedb6d68
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               300
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+Found incumbent of value 1499960.760000 after 0.02 sec. (33.51 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 102974 rows and 367462 columns.
+MIP Presolve modified 411 coefficients.
+Reduced MIP has 7027 rows, 23587 columns, and 40293 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.30 sec. (244.94 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 2102 rows and 5890 columns.
+Reduced MIP has 4925 rows, 17697 columns, and 30612 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (12.35 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 4844 rows and 17403 columns.
+Reduced MIP has 81 rows, 294 columns, and 509 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (6.50 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 1 rows and 3 columns.
+Reduced MIP has 80 rows, 291 columns, and 504 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.25 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.00 sec. (0.19 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                      1499960.7600   556022.5800            62.93%
+*     0     0      integral     0   556022.5800   556022.5800       34    0.00%
+Elapsed time = 0.40 sec. (582.80 ticks, tree = 0.00 MB, solutions = 1)
+
+Root node processing (before b&c):
+  Real time             =    0.41 sec. (597.72 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =    0.41 sec. (597.72 ticks)
+
+
+Results statistics:
+	(a) Optimal objective value:				556023
+	(b) Relaxed objective value:				556023
+	(c) Number of branch-and-bound nodes:			0
+	(d) CPX solving time:					0.405221
+	(e) Total time:						0.405221
+	(f) Number of Benders cuts for binary solution:		0
+	(g) Number of Benders cuts for fractional solution:	0
+
+Finish.
+
+
+Input parameters information:
+Solving setting:				Heur-4 (Risk-based repair)
+Number of Customers:				1000
+Number of Suppliers:				100
+Budget (Cardinality restriction):		20
+Disaster Type:			1
+Quality of Service:				10
+Time limitation:				300
+Number of samplings:				100
+Random seed of graph generating:		1
+
+
+Generate graph start......
+Generate graph end. (time: 0.003447 s)
+
+CPX Solving Time Limit: 300
+Version identifier: 20.1.0.0 | 2020-11-10 | 9bedb6d68
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               300
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+Found incumbent of value 1499960.760000 after 0.02 sec. (33.51 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 101684 rows and 364343 columns.
+MIP Presolve modified 211 coefficients.
+Reduced MIP has 8317 rows, 26706 columns, and 45193 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.33 sec. (249.26 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 2184 rows and 6092 columns.
+Reduced MIP has 6133 rows, 20614 columns, and 35192 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (14.16 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 4291 rows and 14164 columns.
+Reduced MIP has 1842 rows, 6450 columns, and 11096 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (8.91 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 1751 rows and 6085 columns.
+Reduced MIP has 91 rows, 365 columns, and 642 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (2.43 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 1 rows and 4 columns.
+Reduced MIP has 90 rows, 361 columns, and 635 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.31 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.00 sec. (0.24 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                      1499960.7600   448578.2800            70.09%
+*     0     0      integral     0   448578.2800   448578.2800       44    0.00%
+Elapsed time = 0.46 sec. (652.69 ticks, tree = 0.00 MB, solutions = 1)
+
+Root node processing (before b&c):
+  Real time             =    0.47 sec. (667.61 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =    0.47 sec. (667.61 ticks)
+
+
+Results statistics:
+	(a) Optimal objective value:				448578
+	(b) Relaxed objective value:				448578
+	(c) Number of branch-and-bound nodes:			0
+	(d) CPX solving time:					0.466435
+	(e) Total time:						0.466435
+	(f) Number of Benders cuts for binary solution:		0
+	(g) Number of Benders cuts for fractional solution:	0
+
+Finish.
+
+
+Input parameters information:
+Solving setting:				Heur-4 (Risk-based repair)
+Number of Customers:				1000
+Number of Suppliers:				100
+Budget (Cardinality restriction):		30
+Disaster Type:			1
+Quality of Service:				10
+Time limitation:				300
+Number of samplings:				100
+Random seed of graph generating:		1
+
+
+Generate graph start......
+Generate graph end. (time: 0.002398 s)
+
+CPX Solving Time Limit: 300
+Version identifier: 20.1.0.0 | 2020-11-10 | 9bedb6d68
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               300
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+Found incumbent of value 1499960.760000 after 0.02 sec. (33.52 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 95849 rows and 343280 columns.
+MIP Presolve modified 114 coefficients.
+Reduced MIP has 14152 rows, 47769 columns, and 81648 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.34 sec. (255.67 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 2490 rows and 7305 columns.
+Reduced MIP has 11662 rows, 40464 columns, and 69521 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.02 sec. (25.97 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 6221 rows and 21769 columns.
+Reduced MIP has 5441 rows, 18695 columns, and 32057 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (18.70 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 2283 rows and 7732 columns.
+Reduced MIP has 3158 rows, 10963 columns, and 18840 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (9.12 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 3 rows and 9 columns.
+Reduced MIP has 3155 rows, 10954 columns, and 18825 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (9.47 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.01 sec. (13.66 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                      1499960.7600   349789.7400            76.68%
+*     0     0      integral     0   353116.6300   353116.6300      727    0.00%
+Elapsed time = 0.52 sec. (718.90 ticks, tree = 0.00 MB, solutions = 1)
+
+Root node processing (before b&c):
+  Real time             =    0.53 sec. (733.85 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =    0.53 sec. (733.85 ticks)
+
+
+Results statistics:
+	(a) Optimal objective value:				353117
+	(b) Relaxed objective value:				353117
+	(c) Number of branch-and-bound nodes:			0
+	(d) CPX solving time:					0.53016
+	(e) Total time:						0.53016
+	(f) Number of Benders cuts for binary solution:		0
+	(g) Number of Benders cuts for fractional solution:	0
+
+Finish.
+
+
+Input parameters information:
+Solving setting:				Heur-4 (Risk-based repair)
+Number of Customers:				1000
+Number of Suppliers:				100
+Budget (Cardinality restriction):		40
+Disaster Type:			1
+Quality of Service:				10
+Time limitation:				300
+Number of samplings:				100
+Random seed of graph generating:		1
+
+
+Generate graph start......
+Generate graph end. (time: 0.00264 s)
+
+CPX Solving Time Limit: 300
+Version identifier: 20.1.0.0 | 2020-11-10 | 9bedb6d68
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               300
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+Found incumbent of value 1499960.760000 after 0.02 sec. (33.52 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 97831 rows and 349939 columns.
+MIP Presolve modified 30 coefficients.
+Reduced MIP has 12170 rows, 41110 columns, and 70330 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.34 sec. (254.43 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 2488 rows and 7264 columns.
+Reduced MIP has 9682 rows, 33846 columns, and 58265 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.02 sec. (22.14 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 6350 rows and 21377 columns.
+Reduced MIP has 3332 rows, 12469 columns, and 21739 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (14.95 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 2 rows and 7 columns.
+Reduced MIP has 3330 rows, 12462 columns, and 21727 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (10.73 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.01 sec. (14.02 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                      1499960.7600   290425.1400            80.64%
+*     0     0      integral     0   292287.4700   292287.4700      662    0.00%
+Elapsed time = 0.48 sec. (648.07 ticks, tree = 0.00 MB, solutions = 1)
+
+Root node processing (before b&c):
+  Real time             =    0.49 sec. (663.03 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =    0.49 sec. (663.03 ticks)
+
+
+Results statistics:
+	(a) Optimal objective value:				292287
+	(b) Relaxed objective value:				292287
+	(c) Number of branch-and-bound nodes:			0
+	(d) CPX solving time:					0.490337
+	(e) Total time:						0.490337
+	(f) Number of Benders cuts for binary solution:		0
+	(g) Number of Benders cuts for fractional solution:	0
+
+Finish.
