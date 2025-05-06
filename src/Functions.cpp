@@ -36,32 +36,33 @@ void GenerateGraph(InstStruct* Inst)
       double tmp = rand()/double(RAND_MAX);
       /* ---------- */
       supp->working = 1.0;
-      if( Inst->DisasterType == 1 && sqrt(pow(supp->x-50, 2) + pow(supp->y-50, 2 )) <= sqrt(5000.0/3.1415926)) { supp->working = 0.0; }
+      if( Inst->DisasterType == 1 )
+      {
+         if (sqrt(pow(supp->x-50, 2) + pow(supp->y-50, 2 )) <= sqrt(10000.0*(1.0-Inst->Prob1)/3.1415926))
+            supp->working = 0.0;
+      }
       if( Inst->DisasterType == 2 )
       {
-         if( sqrt(pow(supp->x-25, 2) + pow(supp->y-25, 2 )) <= sqrt(1250.0/3.1415926) )
+         if( sqrt(pow(supp->x-25, 2) + pow(supp->y-25, 2 )) <= sqrt(2500.0*(1.0-Inst->Prob1)/3.1415926) )
             supp->working = 0.0;
-         else if( sqrt(pow(supp->x-75, 2) + pow(supp->y-25, 2 )) <= sqrt(1250.0/3.1415926) )
+         else if( sqrt(pow(supp->x-75, 2) + pow(supp->y-25, 2 )) <= sqrt(2500.0*(1.0-Inst->Prob1)/3.1415926) )
             supp->working = 0.0;
-         else if( sqrt(pow(supp->x-25, 2) + pow(supp->y-75, 2 )) <= sqrt(1250.0/3.1415926) )
+         else if( sqrt(pow(supp->x-25, 2) + pow(supp->y-75, 2 )) <= sqrt(2500.0*(1.0-Inst->Prob1)/3.1415926) )
             supp->working = 0.0;
-         else if( sqrt(pow(supp->x-75, 2) + pow(supp->y-75, 2 )) <= sqrt(1250.0/3.1415926) )
+         else if( sqrt(pow(supp->x-75, 2) + pow(supp->y-75, 2 )) <= sqrt(2500.0*(1.0-Inst->Prob1)/3.1415926) )
             supp->working = 0.0;
       }
       if( Inst->DisasterType == 3 )
       {
-         if( supp->x >= 5 && supp->x <= 10 ) { supp->working = 0.0; }
-         if( supp->x >= 15 && supp->x <= 20 ) { supp->working = 0.0; }
-         if( supp->x >= 25 && supp->x <= 30 ) { supp->working = 0.0; }
-         if( supp->x >= 35 && supp->x <= 40 ) { supp->working = 0.0; }
-         if( supp->x >= 45 && supp->x <= 50 ) { supp->working = 0.0; }
-         if( supp->x >= 55 && supp->x <= 60 ) { supp->working = 0.0; }
-         if( supp->x >= 65 && supp->x <= 70 ) { supp->working = 0.0; }
-         if( supp->x >= 75 && supp->x <= 80 ) { supp->working = 0.0; }
-         if( supp->x >= 85 && supp->x <= 90 ) { supp->working = 0.0; }
-         if( supp->x >= 96.25 && supp->x <= 98.75 ) { supp->working = 0.0; }
+         if( supp->x >= 50-50*(1.0-Inst->Prob1) && supp->x <= 50+50*(1.0-Inst->Prob1) )
+         {
+            supp->working = 0.0;
+         }
       }
-      if( Inst->DisasterType == 4 ) { supp->working = tmp < Inst->Prob1 ? 1.0 : 0.0; }
+      if( Inst->DisasterType == 4 )
+      {
+         supp->working = tmp < Inst->Prob1 ? 1.0 : 0.0;
+      }
       /* ---------- */
       if( IsEq(supp->working, 1.0) )
          Inst->NumWork++;
@@ -100,13 +101,23 @@ void GenerateGraph(InstStruct* Inst)
       Inst->Cust[i]->degree = Inst->Cust[i]->Edge.size();
    for( int j = 0; j < Inst->NumSupp; j++ )
       Inst->Supp[j]->degree = Inst->Supp[j]->Edge.size();
+   /* Set nearest supplier */
+   for( int j = 0; j < Inst->NumSupp; j++ )
+   {
+      SuppStruct* supp = Inst->Supp[j];
+      if( j == Inst->NumSupp-1 )
+         supp->near = Inst->Supp[0];
+      else
+         supp->near = Inst->Supp[j+1];
+   }
 }
 
 void Sample(InstStruct* Inst)
 {
    /* Generate sample */
-   Inst->Samp = vector<SampStruct*>(Inst->NumSamp);
-   for( int t = 0; t < Inst->NumSamp; t++ )
+   srand(0);
+   Inst->Samp = vector<SampStruct*>(Inst->NumRSamp);
+   for( int t = 0; t < Inst->NumRSamp; t++ )
    {
       SampStruct* samp = new SampStruct;
       Inst->Samp[t] = samp;
@@ -119,9 +130,9 @@ void Sample(InstStruct* Inst)
    for( int i = 0; i < Inst->NumCust; i++ )
    {
       CustStruct* cust = Inst->Cust[i];
-      cust->demand = vector<double>(Inst->NumSamp);
-      cust->cost = vector<double>(Inst->NumSamp);
-      for( int t = 0; t < Inst->NumSamp; t++ )
+      cust->demand = vector<double>(Inst->NumRSamp);
+      cust->cost = vector<double>(Inst->NumRSamp);
+      for( int t = 0; t < Inst->NumRSamp; t++ )
       {
          cust->demand[t] = rand()%3000;
          cust->cost[t] = 1.0/Inst->NumSamp;
@@ -133,16 +144,74 @@ void Sample(InstStruct* Inst)
    for( int j = 0; j < Inst->NumSupp; j++ )
    {
       SuppStruct* supp = Inst->Supp[j];
-      supp->alive = vector<bool>(Inst->NumSamp);
+      supp->alive = vector<bool>(Inst->NumRSamp);
       if( IsEq( Inst->Prob2, -1.0 ) )
          supp->liveprob = 0.5 + 0.5*(rand()/double(RAND_MAX));
       else
          supp->liveprob = Inst->Prob2;
-      for( int t = 0; t < Inst->NumSamp; t++ )
+      //TODO
+      if( Inst->isCasc && IsEq(supp->working, 0.0) )
+         supp->liveprob -= 0.1;
+      for( int t = 0; t < Inst->NumRSamp; t++ )
       {
          double tmp = rand()/double(RAND_MAX);
          supp->alive[t] = tmp < supp->liveprob ? true : false;
       }
+   }
+   //TODO
+   if( Inst->isCasc )
+   {
+      for( int j = 0; j < Inst->NumSupp; j++ )
+      {
+         SuppStruct* supp = Inst->Supp[j];
+         for( int t = 0; t < Inst->NumRSamp; t++ )
+         {
+            if( IsEq(supp->alive[t], 0.0) || IsEq(supp->near->alive[t], 1.0) )
+               continue;
+            double tmp = rand()/double(RAND_MAX);
+            supp->alive[t] = tmp < 0.1 ? false : true;
+         }
+      }
+   }
+}
+
+void ComputeResult(InstStruct* Inst)
+{
+   /* Get relaxed solution */
+   double* sol = new double[Inst->NumReco];
+   if( Inst->SolvingSetting >= 2 )
+      Inst->CPXStatus = CPXgetx(Inst->CPXEnvMaster, Inst->CPXLpMaster, sol, 0, Inst->NumReco-1);
+   if( Inst->SolvingSetting <= 1 )
+      Inst->CPXStatus = CPXgetx(Inst->CPXEnv, Inst->CPXLp, sol, 0, Inst->NumReco-1);
+   if( Inst->CPXStatus ) { PrintErr(); cout << "CPXStatus:" << Inst->CPXStatus << endl; }
+
+   /* Get the indexes where the solution takes the value of one */
+   Inst->OneSupp.resize(0);
+   for( int j = 0; j < Inst->NumReco; j++ )
+   {
+      SuppStruct* supp = Inst->Reco[j];
+      if( sol[j] >= 0.99 )
+         Inst->OneSupp.push_back(supp);
+      else if( sol[j] >= 0.01 )
+         PrintErr();
+   }
+   delete []sol;
+
+   /* Open Suppliers */
+   SetSupplier(Inst, Inst->OneSupp, 1.0);
+
+   for( int t = 0; t < Inst->NumRSamp; t++ )
+   {
+      ChgCPXCoef(Inst, t);
+      SetSupplierStatus(Inst, Inst->Supp, t);
+
+      double tmp;
+      Inst->CPXStatus = CPXlpopt(Inst->CPXEnvSub, Inst->CPXLpSub);
+      if( Inst->CPXStatus ) { PrintErr(); cout << "CPXStatus:" << Inst->CPXStatus << endl; }
+      Inst->CPXStatus = CPXgetobjval(Inst->CPXEnvSub, Inst->CPXLpSub, &tmp);
+      if( Inst->CPXStatus ) { PrintErr(); cout << "CPXStatus:" << Inst->CPXStatus << endl; }
+      tmp = tmp * Inst->NumSamp / Inst->NumRSamp;
+      Inst->Result += tmp ;
    }
 }
 
@@ -357,8 +426,7 @@ void ChangeCPXModel(InstStruct* Inst)
       prior[i] = Inst->Reco[i];
    if( Inst->SolvingSetting == -1 )
    {
-      random_device rd;
-      mt19937 g(rd());
+      mt19937 g(0);
       shuffle(prior.begin(), prior.end(), g);
    }
    else if( Inst->SolvingSetting == -2 )
@@ -428,18 +496,6 @@ void SolveCPXModel(InstStruct* Inst)
    if( Inst->CPXStatus ) { PrintErr(); cout << "CPXStatus:" << Inst->CPXStatus << endl; }
 
    Inst->NumNode = CPXgetnodecnt(Inst->CPXEnv, Inst->CPXLp); /* Get the number of branch-and-bound nodes */
-
-   /* Output the statistic information */
-   cout<<endl<<endl;
-   cout << "Results statistics:"<<endl;
-   cout << "\t(a) Optimal objective value:\t\t\t\t" << Inst->OptObj <<endl;
-   cout << "\t(b) Relaxed objective value:\t\t\t\t" << Inst->RelaxObj <<endl;
-   cout << "\t(c) Number of branch-and-bound nodes:\t\t\t" << Inst->NumNode <<endl;
-   cout << "\t(d) CPX solving time:\t\t\t\t\t" << Inst->CPXSolvingTime << endl;
-   cout << "\t(e) Total time:\t\t\t\t\t\t" << Inst->CPXSolvingTime << endl;
-   cout << "\t(f) Number of Benders cuts for binary solution:\t\t" << 0 << endl;
-   cout << "\t(g) Number of Benders cuts for fractional solution:\t"<< 0 << endl;
-   cout << "\t(h) Number of Benders iterations:\t\t\t"<< 0 << endl;
 }
 
 
@@ -487,6 +543,8 @@ void ReadParam(InstStruct* Inst, char* input)
             Inst->Prob1 = atof(value);
          else if( !strcmp(name, "PROB2") )
             Inst->Prob2 = atof(value);
+         else if( !strcmp(name, "CASC") )
+            Inst->isCasc = atoi(value);
          else if( !strcmp(name, "SETTING") )
          {
             if( CheckEnds(value) )
@@ -507,6 +565,7 @@ void ReadParam(InstStruct* Inst, char* input)
       ReadFile(Inst, setfile);
       delete []setfile;
    }
+   Inst->NumRSamp = max(Inst->NumRSamp, Inst->NumSamp);
 }
 
 /* read parameters from a file */
@@ -557,6 +616,8 @@ void ReadFile(InstStruct* Inst, char* paramfile)
                Inst->Prob1 = atof(value);
             else if( !strcmp(name, "PROB2") )
                Inst->Prob2 = atof(value);
+            else if( !strcmp(name, "CASC") )
+               Inst->isCasc = atoi(value);
             else
                printf("undefined parameter - %s\n", name);
          }
@@ -620,7 +681,7 @@ void FreeMemory(InstStruct* Inst)
       delete Inst->Supp[j];
    for( int e = 0; e < Inst->NumEdge; e++ )
       delete Inst->Edge[e];
-   for( int t = 0; t < Inst->NumSamp; t++ )
+   for( int t = 0; t < Inst->NumRSamp; t++ )
    {
       delete []Inst->Samp[t]->Cost;
       delete []Inst->Samp[t]->Demand;

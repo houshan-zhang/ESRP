@@ -15,6 +15,8 @@ bool IsEq( double a, double b );
 
 void GenerateGraph(InstStruct* Inst);
 
+void ComputeResult(InstStruct* Inst);
+
 void Sample(InstStruct* Inst);
 
 void SetSupplier(InstStruct* Inst, vector<SuppStruct*> Supp, double sign);

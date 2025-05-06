@@ -1,0 +1,109 @@
+
+
+Input parameters information:
+Solving setting:				3 (Benders framework plus initial cuts)
+Number of Customers:				1000
+Number of Suppliers:				100
+Budget (Cardinality restriction):		10
+Disaster Type:					2
+Quality of Service:				10
+Time limitation:				1800
+Number of samplings:				100
+Random seed of graph generating:		1
+
+
+Generate graph start......
+Generate graph end. (time: 2.73302 s)
+
+
+Solve the network recovery problem under Benders decomposition framework......
+
+Build CPX formulation start......
+Build CPX formulation end. (time: 2.3252 s)
+
+CPX Solving Time Limit: 1797.67
+Version identifier: 20.1.0.0 | 2020-11-10 | 9bedb6d68
+CPXPARAM_Preprocessing_Reduce                    1
+CPXPARAM_Preprocessing_Linear                    0
+CPXPARAM_Threads                                 1
+CPXPARAM_MIP_Strategy_CallbackReducedLP          0
+CPXPARAM_TimeLimit                               1797.674802
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+Legacy callback                                  LU
+Warning: Control callbacks may disable some MIP features.
+Tried aggregator 1 time.
+MIP Presolve eliminated 47 rows and 0 columns.
+MIP Presolve modified 5022 coefficients.
+Reduced MIP has 154 rows, 147 columns, and 5222 nonzeros.
+Reduced MIP has 47 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (2.84 ticks)
+Probing time = 0.00 sec. (0.25 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: traditional branch-and-cut.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.00 sec. (2.75 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap         Variable B NodeID Parent  Depth
+
+      0     0   506072.4321     6                 497023.8300      116         
+*     0+    0                       567447.2300   506072.4321            10.82%
+      0     0   509906.3945    14   567447.2300     Cuts: 105      173   10.14%
+*     0+    0                       553121.9700   509906.3945             7.81%
+      0     0   511249.2884    15   553121.9700      Cuts: 71      241    7.57%
+*     0+    0                       534899.1400   511249.2884             4.42%
+      0     0   511802.3376    16   534899.1400      User: 24      286    4.32%
+      0     0   511894.6386    18   534899.1400      User: 13      308    4.30%
+      0     0   511912.3392    17   534899.1400       User: 5      315    4.30%
+      0     0   511912.3684    17   534899.1400       User: 1      316    4.30%
+*     0+    0                       532663.0200   511912.3684             3.90%
+*     0+    0                       527222.8600   511912.3684             2.90%
+      0     2   511912.3684    17   527222.8600   511914.8417      316    2.90%                        0             0
+Elapsed time = 8.93 sec. (195.55 ticks, tree = 0.01 MB, solutions = 5)
+*    10+   10                       525448.9900   513337.0963             2.31%
+*    30+   22                       524691.4200   513525.4577             2.13%
+     50    36   519200.4386     9   524691.4200   513814.5253     2003    2.07%     supplier-31 D     50     49      9
+    133    94   524594.3788     4   524691.4200   514930.4995     4407    1.86%      supplier-5 U    133    132     15
+    226   156   523514.5732     3   524691.4200   515707.0065     6508    1.71%     supplier-29 D    226    224     11
+    320   218   520738.0043    10   524691.4200   516232.2580     8440    1.61%     supplier-23 D    320    319      7
+    391   268   523234.5347     6   524691.4200   516450.5213    10456    1.57%     supplier-52 U    391    390     12
+    460   309   522867.8456     9   524691.4200   516615.5223    11907    1.54%     supplier-14 D    460    459      9
+    536   354   520141.9229     6   524691.4200   516901.1656    13671    1.48%     supplier-59 N    536    535     12
+    617   397        cutoff         524691.4200   517214.0699    15448    1.43%     supplier-59 U    617    407     11
+    689   437   522033.8001    10   524691.4200   517706.9422    17302    1.33%     supplier-59 N    689    618      6
+*   868   508      integral     0   524221.6200   518287.1760    21739    1.13%
+*   869   504      integral     0   524195.5400   518287.1760    21746    1.13%
+    980   562   523571.8841     6   524195.5400   518484.1400    24245    1.09%     supplier-66 U    980    979      8
+Elapsed time = 43.92 sec. (3352.14 ticks, tree = 0.32 MB, solutions = 9)
+   1290   668   524003.3132     6   524195.5400   519430.3786    31464    0.91%     supplier-14 N   1290   1289     11
+   1580   721   522253.2882     8   524195.5400   520221.1883    37755    0.76%     supplier-32 N   1580    355      9
+   1906   747   522735.9285     8   524195.5400   520932.3843    44931    0.62%     supplier-32 D   1906    918      7
+   2250   708   523201.0764     7   524195.5400   521728.3023    51334    0.47%     supplier-38 N   2250    497      8
+   2615   592   523296.7695     7   524195.5400   522438.2438    57559    0.34%     supplier-21 N   2615     29     12
+   2993   379        cutoff         524195.5400   523125.0834    62464    0.20%     supplier-52 D   2993   1849     11
+
+Mixed integer rounding cuts applied:  12
+User cuts applied:  3305
+
+Root node processing (before b&c):
+  Real time             =    8.93 sec. (195.84 ticks)
+Sequential b&c:
+  Real time             =   45.18 sec. (9773.74 ticks)
+                          ------------
+Total (root+branch&cut) =   54.11 sec. (9969.58 ticks)
+
+
+Results statistics:
+	(a) Optimal objective value:				524195.54
+	(b) Relaxed objective value:				524195.54
+	(c) Relative Gap:					0.00 (%)
+	(d) Number of branch-and-bound nodes:			3406
+	(e) CPLEX solving time:					54.11
+	(f) Total time:						56.43
+	(g) Number of Benders cuts for binary solution:		2880
+	(h) Number of Benders cuts for fractional solution:	425
+	(i) Number of Benders iterations:			75
+	(j) Overall simulation result:				520342.79
+
+Finish.

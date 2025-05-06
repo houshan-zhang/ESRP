@@ -1,0 +1,73 @@
+
+
+Input parameters information:
+Solving setting:				2 (Benders framework)
+Number of Customers:				1000
+Number of Suppliers:				100
+Budget (Cardinality restriction):		10
+Disaster Type:					1
+Quality of Service:				10
+Time limitation:				1800
+Number of samplings:				100
+Random seed of graph generating:		1
+
+
+Generate graph start......
+Generate graph end. (time: 2.5812 s)
+
+
+Solve the network recovery problem under Benders decomposition framework......
+
+Build CPX formulation start......
+Build CPX formulation end. (time: 0.003878 s)
+
+CPX Solving Time Limit: 1800
+Version identifier: 20.1.0.0 | 2020-11-10 | 9bedb6d68
+CPXPARAM_Preprocessing_Reduce                    1
+CPXPARAM_Preprocessing_Linear                    0
+CPXPARAM_Threads                                 1
+CPXPARAM_MIP_Strategy_CallbackReducedLP          0
+CPXPARAM_TimeLimit                               1799.996122
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+Legacy callback                                  LU
+Warning: Control callbacks may disable some MIP features.
+Tried aggregator 1 time.
+MIP Presolve eliminated 1 rows and 0 columns.
+Reduced MIP has 0 rows, 100 columns, and 0 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.02 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: traditional branch-and-cut.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.00 sec. (0.00 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap         Variable B NodeID Parent  Depth
+
+*     0     0      integral     0   214122.2000        0.0000        0  100.00%                        0             0
+Elapsed time = 0.33 sec. (0.17 ticks, tree = 0.00 MB, solutions = 1)
+
+User cuts applied:  100
+
+Root node processing (before b&c):
+  Real time             =    0.33 sec. (0.17 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =    0.33 sec. (0.17 ticks)
+
+
+Results statistics:
+	(a) Optimal objective value:				214122.20
+	(b) Relaxed objective value:				214122.20
+	(c) Relative Gap:					0.00 (%)
+	(d) Number of branch-and-bound nodes:			0
+	(e) CPLEX solving time:					0.33
+	(f) Total time:						0.33
+	(g) Number of Benders cuts for binary solution:		100
+	(h) Number of Benders cuts for fractional solution:	0
+	(i) Number of Benders iterations:			1
+	(j) Overall simulation result:				213100.25
+
+Finish.

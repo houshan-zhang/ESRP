@@ -1,0 +1,104 @@
+
+
+Input parameters information:
+Solving setting:				1 (CPX solver)
+Number of Customers:				1000
+Number of Suppliers:				100
+Budget (Cardinality restriction):		10
+Disaster Type:					3
+Quality of Service:				10
+Time limitation:				1800
+Number of samplings:				100
+Random seed of graph generating:		1
+
+
+Generate graph start......
+Generate graph end. (time: 0.804057 s)
+
+CPX Solving Time Limit: 1800
+Version identifier: 20.1.0.0 | 2020-11-10 | 9bedb6d68
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+Found incumbent of value 1505002.110000 after 0.05 sec. (33.50 ticks)
+Tried aggregator 2 times.
+MIP Presolve eliminated 68380 rows and 243376 columns.
+MIP Presolve added 349 rows and 0 columns.
+MIP Presolve modified 1016 coefficients.
+Aggregator did 349 substitutions.
+Reduced MIP has 41621 rows, 147322 columns, and 258007 nonzeros.
+Reduced MIP has 54 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 1.11 sec. (368.75 ticks)
+Probing time = 0.07 sec. (6.58 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 951 rows and 2786 columns.
+Reduced MIP has 40670 rows, 144536 columns, and 253384 nonzeros.
+Reduced MIP has 54 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.41 sec. (146.80 ticks)
+Probing time = 0.04 sec. (6.55 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 5.78 sec. (3370.22 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                      1505002.1100   342640.6000            77.23%
+      0     0   647084.6663    11  1505002.1100   647084.6663    96783   57.00%
+*     0+    0                       671171.3200   647084.6663             3.59%
+      0     0   649428.1686    14   671171.3200    Cuts: 6064   114436    3.24%
+      0     0   651007.1220    13   671171.3200    Cuts: 6029   128307    3.00%
+      0     0   652247.1615    13   671171.3200    Cuts: 5059   141672    2.82%
+      0     0   652818.1652    12   671171.3200    Cuts: 3739   149728    2.73%
+      0     0   653197.7531    10   671171.3200    Cuts: 2530   156719    2.68%
+      0     0   653434.2091    12   671171.3200    Cuts: 1867   160961    2.64%
+      0     0   653582.7639    10   671171.3200    Cuts: 1982   166394    2.62%
+      0     0   653636.7912    11   671171.3200    Cuts: 1683   168845    2.61%
+      0     0   653688.1966    13   671171.3200    Cuts: 1754   172012    2.60%
+      0     0   653722.7436    11   671171.3200    Cuts: 2068   175274    2.60%
+*     0+    0                       660883.3700   653722.7436             1.08%
+*     0+    0                       654612.2900   653722.7436             0.14%
+Detecting symmetries...
+      0     2   653722.7436    11   654612.2900   653731.7552   175274    0.13%
+Elapsed time = 143.83 sec. (66275.63 ticks, tree = 0.01 MB, solutions = 4)
+      1     3   653928.3259     8   654612.2900   653733.8506   178591    0.13%
+      2     4   654231.8153    10   654612.2900   653928.4854   183262    0.10%
+      3     5   653982.3874     8   654612.2900   653929.5052   184570    0.10%
+      4     6   654568.5017     4   654612.2900   654006.1102   187729    0.09%
+      5     7   654126.3623     9   654612.2900   654078.3911   193595    0.08%
+      6     6        cutoff         654612.2900   654144.3458   195221    0.07%
+      7     7   654203.5910     8   654612.2900   654224.5237   197929    0.06%
+      8     8   654346.5955     7   654612.2900   654234.3610   199989    0.06%
+      9     7        cutoff         654612.2900   654234.3610   201267    0.06%
+     13     3        cutoff         654612.2900   654262.8641   207143    0.05%
+Elapsed time = 174.83 sec. (75529.74 ticks, tree = 0.93 MB, solutions = 4)
+
+Implied bound cuts applied:  12940
+Flow cuts applied:  430
+Mixed integer rounding cuts applied:  669
+Gomory fractional cuts applied:  7
+
+Root node processing (before b&c):
+  Real time             =  143.78 sec. (66277.02 ticks)
+Sequential b&c:
+  Real time             =   31.74 sec. (9508.74 ticks)
+                          ------------
+Total (root+branch&cut) =  175.52 sec. (75785.76 ticks)
+
+
+Results statistics:
+	(a) Optimal objective value:				654612.29
+	(b) Relaxed objective value:				654612.29
+	(c) Relative Gap:					0.00 (%)
+	(d) Number of branch-and-bound nodes:			17
+	(e) CPLEX solving time:					175.51
+	(f) Total time:						175.86
+	(g) Number of Benders cuts for binary solution:		0
+	(h) Number of Benders cuts for fractional solution:	0
+	(i) Number of Benders iterations:			0
+	(j) Overall simulation result:				649155.97
+
+Finish.

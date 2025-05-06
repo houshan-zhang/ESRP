@@ -1,0 +1,106 @@
+
+
+Input parameters information:
+Solving setting:				3 (Benders framework plus initial cuts)
+Number of Customers:				1000
+Number of Suppliers:				100
+Budget (Cardinality restriction):		10
+Disaster Type:					4
+Quality of Service:				10
+Time limitation:				1800
+Number of samplings:				100
+Random seed of graph generating:		1
+
+
+Generate graph start......
+Generate graph end. (time: 0.05966 s)
+
+
+Solve the network recovery problem under Benders decomposition framework......
+
+Build CPX formulation start......
+Build CPX formulation end. (time: 1.66828 s)
+
+CPX Solving Time Limit: 1798.33
+Version identifier: 20.1.0.0 | 2020-11-10 | 9bedb6d68
+CPXPARAM_Preprocessing_Reduce                    1
+CPXPARAM_Preprocessing_Linear                    0
+CPXPARAM_Threads                                 1
+CPXPARAM_MIP_Strategy_CallbackReducedLP          0
+CPXPARAM_TimeLimit                               1798.3317179999999
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+Legacy callback                                  LU
+Warning: Control callbacks may disable some MIP features.
+Tried aggregator 1 time.
+MIP Presolve eliminated 72 rows and 0 columns.
+MIP Presolve modified 3333 coefficients.
+Reduced MIP has 129 rows, 141 columns, and 3688 nonzeros.
+Reduced MIP has 41 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (2.35 ticks)
+Probing time = 0.00 sec. (0.17 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: traditional branch-and-cut.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.00 sec. (1.93 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap         Variable B NodeID Parent  Depth
+
+      0     0   332883.3836     4                 329041.9400      112         
+*     0+    0                       367944.6400   332883.3836             9.53%
+      0     0   335579.4264    12   367944.6400      Cuts: 73      151    8.80%
+*     0+    0                       357397.6400   335579.4264             6.10%
+      0     0   336138.5573    13   357397.6400      Cuts: 41      189    5.95%
+      0     0   336272.9805    13   357397.6400      Cuts: 30      218    5.91%
+      0     0   336374.9635    14   357397.6400      Cuts: 10      239    5.88%
+      0     0   336393.5976    14   357397.6400      Cuts: 13      248    5.88%
+      0     0   336396.0018    14   357397.6400       User: 2      251    5.88%
+*     0+    0                       348021.9900   336396.0018             3.34%
+*     0+    0                       347677.8800   336396.0018             3.24%
+      0     2   336396.0018    14   347677.8800   336414.2916      251    3.24%                        0             0
+Elapsed time = 5.92 sec. (102.84 ticks, tree = 0.01 MB, solutions = 4)
+     60    47   339458.7561     9   347677.8800   337891.4133     2443    2.81%     supplier-56 D     60     59      8
+*   120+   80                       345262.3800   338128.9498             2.07%
+*   144    94      integral     0   344766.1500   338283.4176     3822    1.88%     supplier-51 D    144    143     23
+    237   150        cutoff         344766.1500   338969.4106     5585    1.68%      supplier-2 U    237    235     11
+    315   203   340111.1240     8   344766.1500   339427.3355     7135    1.55%     supplier-38 D    315    314     11
+*   320+  201                       344543.5400   339427.3355             1.48%
+    385   248   340172.0688     8   344543.5400   339513.3038     8538    1.46%      supplier-2 U    385    384     10
+    463   294   340736.0135     9   344543.5400   339703.2573    10164    1.40%     supplier-38 D    463    462      8
+    538   337        cutoff         344543.5400   339897.5363    11633    1.35%     supplier-45 U    538    537     16
+    608   377   343113.3528     5   344543.5400   339972.1100    13137    1.33%     supplier-56 D    608    607     11
+*   650+  396                       344406.2600   340089.1567             1.25%
+*   655   360      integral     0   343904.3900   340089.1567    14054    1.11%     supplier-28 D    655    654     18
+    891   412   343891.3319     2   343904.3900   340891.0432    19026    0.88%     supplier-12 N    891    890     16
+Elapsed time = 47.04 sec. (3101.87 ticks, tree = 0.49 MB, solutions = 9)
+   1140   423   343681.0714     5   343904.3900   341537.3021    24240    0.69%     supplier-38 N   1140    658      6
+   1430   370   343802.8474     4   343904.3900   342373.2652    29132    0.45%     supplier-46 D   1430   1428      9
+   1724   149   343522.7406     4   343904.3900   343210.6706    33287    0.20%     supplier-12 N   1724   1408     12
+
+Flow cuts applied:  4
+Mixed integer rounding cuts applied:  8
+Gomory fractional cuts applied:  1
+User cuts applied:  4486
+
+Root node processing (before b&c):
+  Real time             =    5.92 sec. (103.10 ticks)
+Sequential b&c:
+  Real time             =   46.83 sec. (6287.56 ticks)
+                          ------------
+Total (root+branch&cut) =   52.75 sec. (6390.66 ticks)
+
+
+Results statistics:
+	(a) Optimal objective value:				343904.39
+	(b) Relaxed objective value:				343904.39
+	(c) Relative Gap:					0.00 (%)
+	(d) Number of branch-and-bound nodes:			1887
+	(e) CPLEX solving time:					52.75
+	(f) Total time:						54.42
+	(g) Number of Benders cuts for binary solution:		3860
+	(h) Number of Benders cuts for fractional solution:	626
+	(i) Number of Benders iterations:			113
+	(j) Overall simulation result:				346002.59
+
+Finish.

@@ -1,0 +1,93 @@
+
+
+Input parameters information:
+Solving setting:				3 (Benders framework plus initial cuts)
+Number of Customers:				1000
+Number of Suppliers:				100
+Budget (Cardinality restriction):		10
+Disaster Type:					1
+Quality of Service:				10
+Time limitation:				1800
+Number of samplings:				100
+Random seed of graph generating:		1
+
+
+Generate graph start......
+Generate graph end. (time: 1.34697 s)
+
+
+Solve the network recovery problem under Benders decomposition framework......
+
+Build CPX formulation start......
+Build CPX formulation end. (time: 1.8719 s)
+
+CPX Solving Time Limit: 1798.13
+Version identifier: 20.1.0.0 | 2020-11-10 | 9bedb6d68
+CPXPARAM_Preprocessing_Reduce                    1
+CPXPARAM_Preprocessing_Linear                    0
+CPXPARAM_Threads                                 1
+CPXPARAM_MIP_Strategy_CallbackReducedLP          0
+CPXPARAM_TimeLimit                               1798.128101
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+Legacy callback                                  LU
+Warning: Control callbacks may disable some MIP features.
+Tried aggregator 1 time.
+MIP Presolve eliminated 2 rows and 0 columns.
+MIP Presolve modified 4980 coefficients.
+Reduced MIP has 199 rows, 149 columns, and 5209 nonzeros.
+Reduced MIP has 49 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (2.51 ticks)
+Probing time = 0.00 sec. (0.24 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: traditional branch-and-cut.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.00 sec. (2.20 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap         Variable B NodeID Parent  Depth
+
+      0     0   715128.8365     5                 707297.2500      109         
+*     0+    0                       729193.5200   715128.8365             1.93%
+      0     0   718015.5285    11   729193.5200      Cuts: 57      154    1.53%
+*     0+    0                       725178.6500   718015.5285             0.99%
+      0     0   718518.8227    11   725178.6500      Cuts: 36      189    0.92%
+*     0+    0                       723236.4400   718518.8227             0.65%
+      0     0   718687.8401    12   723236.4400      Cuts: 18      216    0.63%
+      0     0   718772.7368    13   723236.4400      Cuts: 43      238    0.62%
+      0     0   718820.6142    10   723236.4400      Cuts: 16      256    0.61%
+      0     0   718915.7717    11   723236.4400      Cuts: 19      275    0.60%
+      0     0   718929.1267    10   723236.4400       Cuts: 5      281    0.60%
+      0     0   718945.2124    12   723236.4400      Cuts: 17      296    0.59%
+      0     0   718945.4313    12   723236.4400       User: 1      298    0.59%
+*     0+    0                       723101.6800   718945.4313             0.57%
+      0     2   718945.4313    12   723101.6800   718946.0233      298    0.57%                        0             0
+Elapsed time = 10.51 sec. (91.45 ticks, tree = 0.01 MB, solutions = 4)
+*    30+   16                       722276.4000   719955.4348             0.32%
+
+Flow cuts applied:  8
+Mixed integer rounding cuts applied:  41
+Gomory fractional cuts applied:  2
+User cuts applied:  516
+
+Root node processing (before b&c):
+  Real time             =   10.51 sec. (91.50 ticks)
+Sequential b&c:
+  Real time             =   16.07 sec. (98.72 ticks)
+                          ------------
+Total (root+branch&cut) =   26.58 sec. (190.22 ticks)
+
+
+Results statistics:
+	(a) Optimal objective value:				722276.40
+	(b) Relaxed objective value:				722276.40
+	(c) Relative Gap:					0.00 (%)
+	(d) Number of branch-and-bound nodes:			91
+	(e) CPLEX solving time:					26.58
+	(f) Total time:						28.45
+	(g) Number of Benders cuts for binary solution:		308
+	(h) Number of Benders cuts for fractional solution:	208
+	(i) Number of Benders iterations:			38
+	(j) Overall simulation result:				723934.35
+
+Finish.

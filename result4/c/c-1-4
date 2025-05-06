@@ -1,0 +1,94 @@
+
+
+Input parameters information:
+Solving setting:				1 (CPX solver)
+Number of Customers:				1000
+Number of Suppliers:				100
+Budget (Cardinality restriction):		10
+Disaster Type:					3
+Quality of Service:				10
+Time limitation:				1800
+Number of samplings:				10
+Random seed of graph generating:		1
+
+
+Generate graph start......
+Generate graph end. (time: 2.92406 s)
+
+CPX Solving Time Limit: 1800
+Version identifier: 20.1.0.0 | 2020-11-10 | 9bedb6d68
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+Found incumbent of value 1510652.400000 after 0.01 sec. (3.23 ticks)
+Tried aggregator 2 times.
+MIP Presolve eliminated 5998 rows and 20317 columns.
+MIP Presolve added 42 rows and 0 columns.
+MIP Presolve modified 155 coefficients.
+Aggregator did 42 substitutions.
+Reduced MIP has 5003 rows, 18795 columns, and 33245 nonzeros.
+Reduced MIP has 54 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.15 sec. (38.33 ticks)
+Probing time = 0.01 sec. (0.85 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 72 rows and 204 columns.
+Reduced MIP has 4931 rows, 18591 columns, and 32909 nonzeros.
+Reduced MIP has 54 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.05 sec. (17.62 ticks)
+Probing time = 0.00 sec. (0.85 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.18 sec. (138.11 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                      1510652.4000   190129.4000            87.41%
+      0     0   423910.7581    11  1510652.4000   423910.7581    10349   71.94%
+*     0+    0                       457184.3000   423910.7581             7.28%
+      0     0   430630.1431    11   457184.3000    Cuts: 1103    12047    5.81%
+*     0+    0                       437169.2000   430630.1431             1.50%
+      0     0   433044.0187     6   437169.2000     Cuts: 748    12966    0.94%
+      0     0   433627.0392     4   437169.2000     Cuts: 206    13546    0.81%
+      0     0   433744.1858     5   437169.2000     Cuts: 205    13920    0.78%
+      0     0   434080.7987     5   437169.2000     Cuts: 240    14281    0.71%
+*     0+    0                       435429.6000   434080.7987             0.31%
+      0     0   434266.4653     4   435429.6000     Cuts: 181    14728    0.27%
+      0     0   434384.2650     3   435429.6000     Cuts: 142    15047    0.24%
+      0     0   434384.2650     3   435429.6000     Cuts: 122    15165    0.24%
+      0     0   434384.2650     3   435429.6000      Cuts: 80    15269    0.24%
+Detecting symmetries...
+      0     2   434384.2650     3   435429.6000   434388.5530    15269    0.24%
+Elapsed time = 2.07 sec. (1336.59 ticks, tree = 0.01 MB, solutions = 3)
+      9     3   435367.9536     2   435429.6000   435241.5925    19037    0.04%
+
+Implied bound cuts applied:  1566
+Flow cuts applied:  43
+Mixed integer rounding cuts applied:  52
+Lift and project cuts applied:  1
+Gomory fractional cuts applied:  8
+
+Root node processing (before b&c):
+  Real time             =    2.07 sec. (1335.96 ticks)
+Sequential b&c:
+  Real time             =    0.36 sec. (368.35 ticks)
+                          ------------
+Total (root+branch&cut) =    2.43 sec. (1704.31 ticks)
+
+
+Results statistics:
+	(a) Optimal objective value:				435.43
+	(b) Relaxed objective value:				435.43
+	(c) Relative Gap:					-0.00 (%)
+	(d) Number of branch-and-bound nodes:			13
+	(e) CPLEX solving time:					2.43
+	(f) Total time:						2.48
+	(g) Number of Benders cuts for binary solution:		0
+	(h) Number of Benders cuts for fractional solution:	0
+	(i) Number of Benders iterations:			0
+	(j) Overall simulation result:				460.88
+
+Finish.

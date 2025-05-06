@@ -1,0 +1,93 @@
+
+
+Input parameters information:
+Solving setting:				1 (CPX solver)
+Number of Customers:				1000
+Number of Suppliers:				100
+Budget (Cardinality restriction):		10
+Disaster Type:					1
+Quality of Service:				10
+Time limitation:				1800
+Number of samplings:				100
+Random seed of graph generating:		1
+
+
+Generate graph start......
+Generate graph end. (time: 0.573405 s)
+
+CPX Solving Time Limit: 1800
+Version identifier: 20.1.0.0 | 2020-11-10 | 9bedb6d68
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+Found incumbent of value 1505002.110000 after 0.03 sec. (33.54 ticks)
+Tried aggregator 2 times.
+MIP Presolve eliminated 68334 rows and 221593 columns.
+MIP Presolve added 411 rows and 0 columns.
+MIP Presolve modified 2694 coefficients.
+Aggregator did 411 substitutions.
+Reduced MIP has 41667 rows, 169045 columns, and 305091 nonzeros.
+Reduced MIP has 48 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.76 sec. (392.75 ticks)
+Probing time = 0.06 sec. (9.25 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 919 rows and 2601 columns.
+Reduced MIP has 40748 rows, 166444 columns, and 300808 nonzeros.
+Reduced MIP has 48 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.35 sec. (169.30 ticks)
+Probing time = 0.05 sec. (9.22 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 14.46 sec. (6494.46 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                      1505002.1100   121461.1200            91.93%
+      0     0   268077.0824    14  1505002.1100   268077.0824   132379   82.19%
+*     0+    0                       318976.9900   268077.0824            15.96%
+      0     0   274971.0760    15   318976.9900    Cuts: 9970   162796   13.80%
+*     0+    0                       285185.4800   274971.0760             3.58%
+      0     0   276649.1043     8   285185.4800    Cuts: 9379   183447    2.99%
+      0     0   277293.6744    13   285185.4800    Cuts: 5987   198603    2.77%
+      0     0   278024.0355    12   285185.4800    Cuts: 8472   221794    2.51%
+      0     0   278378.1218    13   285185.4800    Cuts: 5610   236018    2.39%
+*     0+    0                       278808.5200   278378.1218             0.15%
+      0     0   278514.5922    12   278808.5200    Cuts: 5077   245249    0.11%
+      0     0   278526.2985     2   278808.5200    Cuts: 2984   247725    0.10%
+      0     0   278526.2985     2   278808.5200     Cuts: 330   247936    0.10%
+      0     0   278526.2985     2   278808.5200     Cuts: 258   248074    0.10%
+Detecting symmetries...
+      0     2   278526.2985     2   278808.5200   278527.5928   248074    0.10%
+Elapsed time = 369.45 sec. (127333.26 ticks, tree = 0.01 MB, solutions = 4)
+      2     0        cutoff         278808.5200   278808.5200   251423    0.00%
+
+Implied bound cuts applied:  21684
+Flow cuts applied:  980
+Mixed integer rounding cuts applied:  2383
+Gomory fractional cuts applied:  9
+
+Root node processing (before b&c):
+  Real time             =  369.37 sec. (127341.73 ticks)
+Sequential b&c:
+  Real time             =    3.18 sec. (1458.79 ticks)
+                          ------------
+Total (root+branch&cut) =  372.55 sec. (128800.53 ticks)
+
+
+Results statistics:
+	(a) Optimal objective value:				278808.52
+	(b) Relaxed objective value:				278808.52
+	(c) Relative Gap:					-0.00 (%)
+	(d) Number of branch-and-bound nodes:			3
+	(e) CPLEX solving time:					372.52
+	(f) Total time:						372.74
+	(g) Number of Benders cuts for binary solution:		0
+	(h) Number of Benders cuts for fractional solution:	0
+	(i) Number of Benders iterations:			0
+	(j) Overall simulation result:				279274.42
+
+Finish.

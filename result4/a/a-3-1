@@ -1,0 +1,91 @@
+
+
+Input parameters information:
+Solving setting:				3 (Benders framework plus initial cuts)
+Number of Customers:				1000
+Number of Suppliers:				100
+Budget (Cardinality restriction):		10
+Disaster Type:					1
+Quality of Service:				10
+Time limitation:				1800
+Number of samplings:				1
+Random seed of graph generating:		1
+
+
+Generate graph start......
+Generate graph end. (time: 1.01625 s)
+
+
+Solve the network recovery problem under Benders decomposition framework......
+
+Build CPX formulation start......
+Build CPX formulation end. (time: 0.027199 s)
+
+CPX Solving Time Limit: 1799.97
+Version identifier: 20.1.0.0 | 2020-11-10 | 9bedb6d68
+CPXPARAM_Preprocessing_Reduce                    1
+CPXPARAM_Preprocessing_Linear                    0
+CPXPARAM_Threads                                 1
+CPXPARAM_MIP_Strategy_CallbackReducedLP          0
+CPXPARAM_TimeLimit                               1799.9728009999999
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+Legacy callback                                  LU
+Warning: Control callbacks may disable some MIP features.
+Tried aggregator 1 time.
+Reduced MIP has 3 rows, 50 columns, and 131 nonzeros.
+Reduced MIP has 49 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.05 ticks)
+Probing time = 0.00 sec. (0.01 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: traditional branch-and-cut.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.00 sec. (0.03 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap         Variable B NodeID Parent  Depth
+
+      0     0   380509.1742     2                 368087.0000       10         
+*     0+    0                       457300.0000   380509.1742            16.79%
+      0     0   384647.7537     4   457300.0000       User: 1       14   15.89%
+*     0+    0                       427408.0000   384647.7537            10.00%
+      0     0   386031.9343     6   427408.0000       User: 1       17    9.68%
+      0     0   388003.6626     6   427408.0000       Cuts: 2       22    9.22%
+      0     0   388424.0150     7   427408.0000       Cuts: 2       25    9.12%
+      0     0   389514.7000     8   427408.0000       Cuts: 2       29    8.87%
+*     0+    0                       419759.0000   389514.7000             7.21%
+      0     0   390244.2195     7   419759.0000       Cuts: 2       36    7.03%
+*     0+    0                       415361.0000   390244.2195             6.05%
+      0     0   390355.1361     9   415361.0000       Cuts: 2       40    6.02%
+      0     0   390884.4681    10   415361.0000       Cuts: 2       46    5.89%
+      0     0   390972.7220    10   415361.0000       Cuts: 2       49    5.87%
+      0     0   390973.1682    11   415361.0000       User: 1       50    5.87%
+      0     2   390973.1682    11   415361.0000   391618.5200       50    5.72%                        0             0
+Elapsed time = 0.03 sec. (4.20 ticks, tree = 0.01 MB, solutions = 4)
+*    40    17      integral     0   405732.0000   394766.1055      357    2.70%
+*   213    20      integral     0   403865.0000   401828.4108      875    0.50%
+
+Mixed integer rounding cuts applied:  5
+User cuts applied:  85
+
+Root node processing (before b&c):
+  Real time             =    0.03 sec. (4.21 ticks)
+Sequential b&c:
+  Real time             =    0.07 sec. (24.89 ticks)
+                          ------------
+Total (root+branch&cut) =    0.09 sec. (29.10 ticks)
+
+
+Results statistics:
+	(a) Optimal objective value:				403.87
+	(b) Relaxed objective value:				403.87
+	(c) Relative Gap:					0.00 (%)
+	(d) Number of branch-and-bound nodes:			235
+	(e) CPLEX solving time:					0.09
+	(f) Total time:						0.12
+	(g) Number of Benders cuts for binary solution:		15
+	(h) Number of Benders cuts for fractional solution:	70
+	(i) Number of Benders iterations:			85
+	(j) Overall simulation result:				457.32
+
+Finish.

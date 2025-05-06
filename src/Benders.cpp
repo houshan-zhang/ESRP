@@ -24,9 +24,9 @@ int CPXPUBLIC BinCallback(CPXCENVptr Env, void* cb_data, int wherefrom, void* cb
    for( int j = 0; j < Inst->NumReco; j++ )
    {
       SuppStruct* supp = Inst->Reco[j];
-      if( Inst->RelaxSol[j] >= 0.999 )
+      if( Inst->RelaxSol[j] >= 0.99 )
          Inst->OneSupp.push_back(supp);
-      else if( Inst->RelaxSol[j] >= 0.001 )
+      else if( Inst->RelaxSol[j] >= 0.01 )
          PrintErr();
    }
 
@@ -291,7 +291,7 @@ void BuildSubModel(InstStruct* Inst)
       {
          Obj[counter] = 0.0;
          Lb[counter] = 0.0;
-         Ub[counter] = 1e+15;
+         Ub[counter] = cust->Edge[j]->supp->bandwidth;
          sprintf(NameVar[counter], "flow-%d-%d", i, cust->Edge[j]->supp->id);
          counter++;
       }
@@ -409,7 +409,7 @@ void BuildMasterModel(InstStruct* Inst)
    /* ( Col - 2 ) Create continuous variables for each scenario */
    for( int t = 0; t < Inst->NumSamp; t++ )
    {
-      Obj[counter] = 1;
+      Obj[counter] = 1.0;
       Lb[counter] = 0.0;
       Ub[counter] = 1e+15;
       TypeVar[counter] = 'C';
@@ -616,7 +616,7 @@ void SolveMasterModel(InstStruct* Inst)
    Inst->CPXStatus = CPXgetx(Inst->CPXEnvMaster, Inst->CPXLpMaster, sol, 0, Inst->NumReco+Inst->NumSamp-1);
    for( int j = 0; j < Inst->NumReco; j++ )
    {
-      if( sol[j] >= 0.999 )
+      if( sol[j] >= 0.99 )
          cout << sol[j] << " S(" << Inst->Reco[j]->id << ")  ";
    }
    cout << endl;
@@ -641,18 +641,6 @@ void SolveMasterModel(InstStruct* Inst)
    if( Inst->CPXStatus ) { PrintErr(); cout << "CPXStatus:" << Inst->CPXStatus << endl; }
 
    Inst->NumNode = CPXgetnodecnt(Inst->CPXEnvMaster, Inst->CPXLpMaster); /* Get the number of branch-and-bound nodes */
-
-   /* Output the statistic information */
-   cout<<endl<<endl;
-   cout << "Results statistics:"<<endl;
-   cout << "\t(a) Optimal objective value:\t\t\t\t" << Inst->OptObj <<endl;
-   cout << "\t(b) Relaxed objective value:\t\t\t\t" << Inst->RelaxObj <<endl;
-   cout << "\t(c) Number of branch-and-bound nodes:\t\t\t" << Inst->NumNode <<endl;
-   cout << "\t(d) CPX solving time:\t\t\t\t\t" << Inst->CPXSolvingTime << endl;
-   cout << "\t(e) Total time:\t\t\t\t\t\t" << Inst->BuildTime + Inst->CPXSolvingTime << endl;
-   cout << "\t(f) Number of Benders cuts for binary solution:\t\t" <<  Inst->NumBinCut << endl;
-   cout << "\t(g) Number of Benders cuts for fractional solution:\t"<<  Inst->NumFracCut << endl;
-   cout << "\t(h) Number of Benders iterations:\t\t\t"<< Inst->NumIter << endl;
 }
 
 /* Free and close CPX environment */

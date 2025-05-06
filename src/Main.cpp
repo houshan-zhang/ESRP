@@ -41,7 +41,7 @@ int main(int argc, char** argv)
    cout << "Number of Customers:\t\t\t\t" << Inst.NumCust << endl;
    cout << "Number of Suppliers:\t\t\t\t" << Inst.NumSupp << endl;
    cout << "Budget (Cardinality restriction):\t\t" << Inst.Budget << endl;
-   cout << "Disaster Type:\t\t\t" << Inst.DisasterType << endl;
+   cout << "Disaster Type:\t\t\t\t\t" << Inst.DisasterType << endl;
    cout << "Quality of Service:\t\t\t\t" << Inst.QoS << endl;
    cout << "Time limitation:\t\t\t\t" << Inst.TimeLimit <<endl;
    cout << "Number of samplings:\t\t\t\t" << Inst.NumSamp << endl;
@@ -64,12 +64,16 @@ int main(int argc, char** argv)
 
    if( Inst.SolvingSetting <= 1 )
    {
+      clock_t BuildTimeStart = clock();
       BuildCPXModel(&Inst);
+      clock_t BuildTimeEnd = clock();
+      Inst.BuildTime=(double)(BuildTimeEnd - BuildTimeStart)/(double)CLOCKS_PER_SEC;
+      BuildMasterModel(&Inst);
+      BuildSubModel(&Inst);
       if( Inst.SolvingSetting < 0 )
          ChangeCPXModel(&Inst);
       //CPXwriteprob(Inst.CPXEnv, Inst.CPXLp, "test.lp", NULL);
       SolveCPXModel(&Inst);
-      CleanCPXModel(&Inst);
    }
    else if( Inst.SolvingSetting >= 2 )
    {
@@ -87,8 +91,32 @@ int main(int argc, char** argv)
 
       /* Solve */
       SolveMasterModel(&Inst);
+   }
 
-      /* Free and close CPX environment */
+   ComputeResult(&Inst);
+
+   /* Output the statistic information */
+   cout<<endl<<endl;
+   printf("Results statistics:\n");
+   printf("\t(a) Optimal objective value:\t\t\t\t%.2f\n", Inst.OptObj/1000.0);
+   printf("\t(b) Relaxed objective value:\t\t\t\t%.2f\n", Inst.RelaxObj/1000.0);
+   printf("\t(c) Relative Gap:\t\t\t\t\t%.2f (%%)\n", 100*(Inst.OptObj-Inst.RelaxObj)/Inst.OptObj);
+   printf("\t(d) Number of branch-and-bound nodes:\t\t\t%d\n", Inst.NumNode);
+   printf("\t(e) CPLEX solving time:\t\t\t\t\t%.2f\n", Inst.CPXSolvingTime);
+   printf("\t(f) Total time:\t\t\t\t\t\t%.2f\n", Inst.BuildTime + Inst.CPXSolvingTime);
+   printf("\t(g) Number of Benders cuts for binary solution:\t\t%d\n", Inst.NumBinCut);
+   printf("\t(h) Number of Benders cuts for fractional solution:\t%d\n", Inst.NumFracCut);
+   printf("\t(i) Number of Benders iterations:\t\t\t%d\n", Inst.NumIter);
+   printf("\t(j) Overall simulation result:\t\t\t\t%.2f\n", Inst.Result/1000.0);
+
+   /* Free and close CPX environment */
+   if( Inst.SolvingSetting <= 1 )
+   {
+      CleanCPXModel(&Inst);
+      CleanBendersModel(&Inst);
+   }
+   else if( Inst.SolvingSetting >= 2 )
+   {
       CleanBendersModel(&Inst);
    }
 

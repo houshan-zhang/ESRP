@@ -63,6 +63,7 @@ struct SuppStruct
    double recover;
    vector<bool> alive;
    double status; /* status = alive[t] && (working || recover) */
+   SuppStruct* near;
 };
 
 /* Sample structure in graph */
@@ -80,17 +81,19 @@ struct InstStruct
 {
    /* Settings */
    int QoS; /* Quality of Service */
-   int SolvingSetting; /* Solving settings (1 for (SNA), 2 for (SNA, SCNA) or 3 for (SNA,SCNA, and INA)) */
+   int SolvingSetting; /* Solving settings (1 for (CPX), 2 for (Benders) or 3 for (Benders + Cuts)) */
    int DisasterType;
    double TimeLimit; /* Time limit */
    //TODO
    double MemLimit; /* Memory limit */
    double MinGap;
    int Budget; /* Cardinality restriction */
-   int ProduceSeed; /* Random seed of producing live-arc graphs (default: 1) */
+   int ProduceSeed = 1; /* Random seed of producing live-arc graphs (default: 1) */
+   bool isCasc = false; /* Whether consider cascading failures of secondary disasters */
 
    /* Graph structures */
    int NumSamp; /* Number of sampling */
+   int NumRSamp = 10000; /* Number of sampling for computing simulation result */
    int NumCust; /* Nmber of custormer */
    int NumSupp; /* Number of supplier */
    int NumWork = 0; /* Number of working supplier */
@@ -115,6 +118,7 @@ struct InstStruct
    int NumThread = 1; /* Number of threads */
    int NumNode; /* Number of branch-and-bound nodes */
    double OptObj; /* Optimal objective value */
+   double Result = 0.0; /* Optimal objective value (compute a large enough number of scenarios) */
    double RelaxObj; /* Relaxed objective value */
    double* CutVal; /* Coefficients of Benders cut */
    int* CutInd; /* Variables indexes of Benders cut */

@@ -3,9 +3,9 @@
 # --------------------------------------------------
 
 OUTFILE       							= default
-SETTING       							= ''
+SETTING       							= 'test'
 SEED          							= 0
-SEEDFILE      							= ''
+SEEDFILE      							= '10'
 MODE        							= 1
 TIME       	   						= 1800
 MEM         		  					= 32768
@@ -71,7 +71,7 @@ help:
 .PHONY:test
 test:
 	cd check; \
-		./scripts/run.sh $(MODE) $(TEST) $(TIME) $(MEM) $(THREADS) ${MINGAP} ${OUTFILE} ${SETTING} ${SEED} ${SEEDFILE} ${CLUSTER} ${EXCLUSIVE} ${MPI} ${QUEUE} ${WRITE} ${TC} ${HC} ${JC}
+		./scripts/run.sh $(MODE) $(TIME) $(MEM) $(THREADS) ${MINGAP} ${OUTFILE} ${SETTING} ${SEED} ${SEEDFILE} ${CLUSTER} ${EXCLUSIVE} ${MPI} ${QUEUE} ${WRITE} ${TC} ${HC} ${JC}
 
 $(BINDIR):
 	@-mkdir $(BINDIR)

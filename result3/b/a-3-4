@@ -1,0 +1,91 @@
+
+
+Input parameters information:
+Solving setting:				3 (Benders framework plus initial cuts)
+Number of Customers:				1000
+Number of Suppliers:				100
+Budget (Cardinality restriction):		10
+Disaster Type:					2
+Quality of Service:				10
+Time limitation:				1800
+Number of samplings:				100
+Random seed of graph generating:		1
+
+
+Generate graph start......
+Generate graph end. (time: 0.693219 s)
+
+
+Solve the network recovery problem under Benders decomposition framework......
+
+Build CPX formulation start......
+Build CPX formulation end. (time: 2.48287 s)
+
+CPX Solving Time Limit: 1797.52
+Version identifier: 20.1.0.0 | 2020-11-10 | 9bedb6d68
+CPXPARAM_Preprocessing_Reduce                    1
+CPXPARAM_Preprocessing_Linear                    0
+CPXPARAM_Threads                                 1
+CPXPARAM_MIP_Strategy_CallbackReducedLP          0
+CPXPARAM_TimeLimit                               1797.5171339999999
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+Legacy callback                                  LU
+Warning: Control callbacks may disable some MIP features.
+Tried aggregator 1 time.
+MIP Presolve eliminated 24 rows and 0 columns.
+MIP Presolve modified 7530 coefficients.
+Reduced MIP has 177 rows, 156 columns, and 7762 nonzeros.
+Reduced MIP has 56 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (3.75 ticks)
+Probing time = 0.00 sec. (0.37 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: traditional branch-and-cut.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.00 sec. (2.68 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap         Variable B NodeID Parent  Depth
+
+      0     0   509997.3668     4                 500958.5000      111         
+*     0+    0                       528597.3100   509997.3668             3.52%
+      0     0   511916.8065     7   528597.3100     Cuts: 104      150    3.16%
+      0     0   513892.9493     9   528597.3100     Cuts: 122      224    2.78%
+      0     0   514541.2817    10   528597.3100      Cuts: 48      279    2.66%
+      0     0   514645.1977    10   528597.3100      Cuts: 11      298    2.64%
+      0     0   514723.7190    10   528597.3100       Cuts: 6      307    2.62%
+      0     0   514757.5520    10   528597.3100    MIRcuts: 3      318    2.62%
+      0     0   514784.8718    10   528597.3100       Cuts: 6      330    2.61%
+      0     2   514784.8718    10   528597.3100   514795.4798      330    2.61%                        0             0
+Elapsed time = 2.95 sec. (144.75 ticks, tree = 0.01 MB, solutions = 1)
+*    10+   10                       527945.5500   516370.2213             2.19%
+*    30+   21                       524577.9200   517543.3223             1.34%
+     88    55   520442.1342     5   524577.9200   518110.9069     2778    1.23%     supplier-14 D     88     24      3
+*   110+   65                       523926.1600   518397.1040             1.06%
+    210    65        cutoff         523926.1600   520989.1133     5492    0.56%     supplier-56 U    210    144      7
+
+Flow cuts applied:  1
+Mixed integer rounding cuts applied:  63
+User cuts applied:  1733
+
+Root node processing (before b&c):
+  Real time             =    2.95 sec. (144.96 ticks)
+Sequential b&c:
+  Real time             =   14.34 sec. (650.81 ticks)
+                          ------------
+Total (root+branch&cut) =   17.30 sec. (795.77 ticks)
+
+
+Results statistics:
+	(a) Optimal objective value:				523926.16
+	(b) Relaxed objective value:				523926.16
+	(c) Relative Gap:					0.00 (%)
+	(d) Number of branch-and-bound nodes:			318
+	(e) CPLEX solving time:					17.30
+	(f) Total time:						19.78
+	(g) Number of Benders cuts for binary solution:		1202
+	(h) Number of Benders cuts for fractional solution:	531
+	(i) Number of Benders iterations:			50
+	(j) Overall simulation result:				526534.25
+
+Finish.

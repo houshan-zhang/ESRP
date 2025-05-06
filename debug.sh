@@ -36,5 +36,5 @@ then
     exit -1
 fi
 
-cd ../check/bin
-valgrind --leak-check=full ./netrec "MODE=1 CUST=1000 SUPP=100 BUDGET=50 PROB1=0.1 PROB2=0.9 SAMP=2 QOS=10 TIME=30"
+cd ..
+valgrind --leak-check=full ./check/bin/netrec "MODE=3 TYPE=1 CUST=1000 SUPP=100 BUDGET=5 PROB1=0.1 PROB2=0.9 SAMP=10 QOS=10 TIME=30"

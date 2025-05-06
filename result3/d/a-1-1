@@ -1,0 +1,78 @@
+
+
+Input parameters information:
+Solving setting:				1 (CPX solver)
+Number of Customers:				1000
+Number of Suppliers:				100
+Budget (Cardinality restriction):		10
+Disaster Type:					4
+Quality of Service:				10
+Time limitation:				1800
+Number of samplings:				100
+Random seed of graph generating:		1
+
+
+Generate graph start......
+Generate graph end. (time: 0.081935 s)
+
+CPX Solving Time Limit: 1800
+Version identifier: 20.1.0.0 | 2020-11-10 | 9bedb6d68
+CPXPARAM_Threads                                 1
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+Found incumbent of value 1504947.020000 after 0.08 sec. (32.67 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 97209 rows and 345803 columns.
+Reduced MIP has 12792 rows, 45197 columns, and 78019 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 1.17 sec. (256.22 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 3868 rows and 12550 columns.
+Reduced MIP has 8924 rows, 32647 columns, and 56712 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.04 sec. (23.28 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 3341 rows and 11311 columns.
+Reduced MIP has 5583 rows, 21336 columns, and 37359 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.02 sec. (16.29 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 7 rows and 21 columns.
+Reduced MIP has 5576 rows, 21315 columns, and 37324 nonzeros.
+Reduced MIP has 0 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.03 sec. (18.56 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: none, using 1 thread.
+Root relaxation solution time = 0.02 sec. (24.73 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                      1504947.0200   238914.4700            84.12%
+*     0     0      integral     0   240411.6500   240411.6500      975    0.00%
+Elapsed time = 1.54 sec. (610.84 ticks, tree = 0.00 MB, solutions = 1)
+
+Root node processing (before b&c):
+  Real time             =    1.56 sec. (623.96 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =    1.56 sec. (623.96 ticks)
+
+
+Results statistics:
+	(a) Optimal objective value:				240411.65
+	(b) Relaxed objective value:				240411.65
+	(c) Relative Gap:					0.00 (%)
+	(d) Number of branch-and-bound nodes:			0
+	(e) CPLEX solving time:					1.56
+	(f) Total time:						1.99
+	(g) Number of Benders cuts for binary solution:		0
+	(h) Number of Benders cuts for fractional solution:	0
+	(i) Number of Benders iterations:			0
+	(j) Overall simulation result:				242965.84
+
+Finish.
